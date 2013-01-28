@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/var/www/herokucake/app'
+let g:netrw_dirhist_2='/var/www/herokucake/app/Config'
+let g:netrw_dirhist_3='/var/www/armno.github.com'
+let g:netrw_dirhist_4='/var/www/armno.github.com/_site'
+let g:netrw_dirhist_5='/var/www/armno.github.com'
+let g:netrw_dirhist_6='/var/www'
+let g:netrw_dirhist_7='/var/www/frank'

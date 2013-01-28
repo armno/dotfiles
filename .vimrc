@@ -4,17 +4,24 @@ set nocompatible
 " Look and Feel
 " Lucius color scheme is at https://github.com/vim-scripts/Lucius
 syntax on
-colorscheme lucius
-LuciusDarkLowContrast
+colorscheme solarized
+" LuciusDarkLowContrast
 set guifont:Droid\ Sans\ Mono\ 13
 set ruler
 set number
+" show invisible characters
+" set lcs=eol:¬
+" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+" set list
+" show file name at title bar
+set title
 
 " Code editing
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smartindent
 set autoindent
+set backspace=indent,eol,start
 
 set nobackup
 set nowritebackup
@@ -28,9 +35,9 @@ set wildmode=list:longest
 
 " key binding
 nmap <space> :
-" imap ,e <esc>
-" imap ,<tab> <C-x><C-o>
-let mapleader=","
+imap ,e <esc>
+imap ,<tab> <C-x><C-o>
+" let mapleader=","
 
 "automatically source .vimrc after save
 if has("autocmd")
