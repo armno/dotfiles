@@ -4,8 +4,8 @@ set nocompatible
 " Look and Feel
 " Lucius color scheme is at https://github.com/vim-scripts/Lucius
 syntax on
-colorscheme solarized
-" LuciusDarkLowContrast
+colorscheme lucius
+LuciusDarkLowContrast
 set guifont:Droid\ Sans\ Mono\ 13
 set ruler
 set number
