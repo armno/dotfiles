@@ -2,12 +2,13 @@
 
 > note to self: `sync.sh` is not used.
 
-### `.vimrc`
+### vim
 
 ```sh
 $ cd ~/code
 $ hub clone armno/dotfiles
 $ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
+$ ln -s ~/code/dotfiles/.vim ~/.vim
 ```
 
 below is the original readme
