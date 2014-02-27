@@ -17,6 +17,11 @@ $ ln -s ~/code/dotfiles/.vim ~/.vim
 $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 ```
 
+### osx
+```sh
+$ ln -s ~/code/dotfiles/.osx ~/.osx
+```
+
 below is the original readme
 
 -----
