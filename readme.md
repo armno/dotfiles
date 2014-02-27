@@ -1,3 +1,19 @@
+# Armno's dotfiles
+
+> note to self: `sync.sh` is not used.
+
+### `.vimrc`
+
+```sh
+$ cd ~/code
+$ hub clone armno/dotfiles
+$ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
+```
+
+below is the original readme
+
+-----
+
 # Paul's dotfiles.
 
 [mathias's readme](https://github.com/mathiasbynens/dotfiles/) is awesome. go read it.
