@@ -11,6 +11,12 @@ $ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
 $ ln -s ~/code/dotfiles/.vim ~/.vim
 ```
 
+### git
+
+```sh
+$ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
+```
+
 below is the original readme
 
 -----
