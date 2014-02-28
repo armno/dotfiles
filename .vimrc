@@ -61,10 +61,6 @@ imap <leader>t <C-y>,
 nmap noh :nohl
 nmap fx :FixWhitespace
 
-" switch between tabs (make it like chrome devtools)
-nmap <C-]> gt
-nmap <C-[> gT
-
 " easymotion
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
