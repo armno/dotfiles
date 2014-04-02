@@ -21,6 +21,7 @@ set t_Co=256
 " show file name at title bar
 set title
 set showcmd
+set showbreak=↪
 " Code editing
 set smartindent
 set tabstop=2
@@ -52,9 +53,7 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 " key binding
 let mapleader=","
 nmap <space> :
-nmap <C-p> CtrlP
 imap <leader>e <esc>
-"imap <leader><tab> <C-x><C-o>
 map <leader>c <c-_><c-_>
 map <F2> :NERDTreeToggle<CR>
 imap <leader>t <C-y>,
@@ -135,3 +134,9 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<leader><leader>'
+
+" Settings for ctrlp-funky plugin
+nmap <C-p> CtrlP
+let g:ctrlp_extensions = ['funky']
+let g:ctrlp_funky_syntax_highlight = 1
+nnoremap <C-R> :CtrlPFunky<Cr>

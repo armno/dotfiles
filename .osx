@@ -46,3 +46,6 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 
 # disable drop-shadow for screenshots captured
 defaults write com.apple.screencapture disable-shadow -bool true
+
+# enable key repeat in non-terminal apps (mvim, sublime)
+defaults write -g ApplePressAndHoldEnabled -bool false
