@@ -58,8 +58,8 @@ imap <leader>e <esc>
 map <leader>c <c-_><c-_>
 map <F2> :NERDTreeToggle<CR>
 imap <leader>t <C-y>,
-nmap noh :nohl
-nmap fx :FixWhitespace
+nmap noh :nohl<CR>
+nmap fx :FixWhitespace<CR>
 
 " easymotion
 map  / <Plug>(easymotion-sn)
