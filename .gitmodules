@@ -34,6 +34,6 @@
 [submodule ".vim/bundle/vim-trailing-whitespace"]
 	path = .vim/bundle/vim-trailing-whitespace
 	url = https://github.com/bronson/vim-trailing-whitespace.git
-[submodule ".vim/colors/base16-vim"]
-	path = ".vim/colors/base16-vim"
+[submodule ".vim/colors/base16"]
+	path = .vim/colors/base16
 	url = https://github.com/chriskempson/base16-vim.git
