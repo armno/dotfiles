@@ -2,11 +2,17 @@
 
 > note to self: `sync.sh` is not used.
 
-### vim
+## setting up
 
 ```sh
 $ cd ~/code
-$ hub clone armno/dotfiles
+$ git clone --recursive git@github.com:armno/dotfiles.git
+```
+this will clone all submodules too (for plugins and colors).
+
+### vim
+
+```sh
 $ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
 $ ln -s ~/code/dotfiles/.vim ~/.vim
 ```
