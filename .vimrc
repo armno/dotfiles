@@ -27,6 +27,12 @@ set smartindent
 set tabstop=2
 set shiftwidth=2
 set autoindent
+" reload files when changed on disk
+set autoread
+" use the same clipboard with osx
+set clipboard=unnamed
+
+set encoding=utf-8
 set backspace=indent,eol,start
 set ch=1
 set linespace=3
@@ -52,10 +58,12 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 
 " key binding
 let mapleader=","
-nmap <space> :
+" nmap <space> : - not really used
 imap <leader>e <esc>
 map <leader>c <c-_><c-_>
-map <F2> :NERDTreeToggle<CR>
+map <leader>d :NERDTreeToggle<CR>
+
+" emmet
 imap <leader>t <C-y>,
 nmap noh :nohl<CR>
 nmap fx :FixWhitespace<CR>
