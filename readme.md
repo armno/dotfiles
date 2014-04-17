@@ -24,7 +24,15 @@ $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 ```
 
 ### osx
+
 ```sh
 $ ln -s ~/code/dotfiles/.osx ~/.osx
 ```
 
+## adding new plugin
+
+using [git submodules](http://git-scm.com/book/en/Git-Tools-Submodules)
+
+```sh
+$ git submodule add <repo_url> .vim/bundle/<directory_name>
+```
