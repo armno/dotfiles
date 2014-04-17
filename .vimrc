@@ -79,25 +79,25 @@ if has("autocmd")
     autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
+" using vim-airline, only `laststatus` config needed here ...
 if has('statusline')
   " Always show status line
   set laststatus=2
   " Broken down into easily includable segments
   " Filename
-  set statusline=%<%f
+  " set statusline=%<%f
   " Options
-  set statusline+=%W%h%m%r
+  " set statusline+=%W%h%m%r
   " Current directory
-  set statusline+=\ [%{getcwd()}]
+  " set statusline+=\ [%{getcwd()}]
   " Right aligned file nav info
-  set statusline+=%=%-14.(%l,%c%c%)\ %p%%
+  " set statusline+=%=%-14.(%l,%c%c%)\ %p%%
 
   " Vim Powerline
   " Ubuntu
   " set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
   " OSX 10.8
-  set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
-
+  " set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
 endif
 
 "hide menu bar for gvim
@@ -111,11 +111,10 @@ set mouse=a
 "highlight search results
 set hlsearch
 
-
-let g:neocomplcache_enable_at_startup=1
+" let g:neocomplcache_enable_at_startup=1
 
 " tab completion for neocomplcache plugin
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -148,3 +147,9 @@ nmap <C-p> CtrlP
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 nnoremap <C-R> :CtrlPFunky<Cr>
+
+" Settings for vim-airline
+" use powerline-patched fonts
+let g:airline_powerline_fonts = 1
+" enable displaying all buffers when only 1 tab is opened
+let g:airline#extensions#tabline#enabled = 1
