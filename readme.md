@@ -36,3 +36,9 @@ using [git submodules](http://git-scm.com/book/en/Git-Tools-Submodules)
 ```sh
 $ git submodule add <repo_url> .vim/bundle/<directory_name>
 ```
+
+updating dotfiles after added plugin
+
+```sh
+$ git submodule update --init
+```
