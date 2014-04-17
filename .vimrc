@@ -153,3 +153,7 @@ nnoremap <C-R> :CtrlPFunky<Cr>
 let g:airline_powerline_fonts = 1
 " enable displaying all buffers when only 1 tab is opened
 let g:airline#extensions#tabline#enabled = 1
+
+" Settings for vim-gitgutter
+" always show sign column (gutter)
+let g:gitgutter_sign_column_always = 1
