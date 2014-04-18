@@ -62,6 +62,8 @@ let mapleader=","
 imap <leader>e <esc>
 map <leader>c <c-_><c-_>
 map <leader>d :NERDTreeToggle<CR>
+nmap <leader>b :bn<CR>
+nmap <leader>B :bp<CR>
 
 " emmet
 imap <leader>t <C-y>,
