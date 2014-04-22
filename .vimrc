@@ -1,8 +1,31 @@
 " no compatible with VI
 set nocompatible
 
-" start pathogen
-execute pathogen#infect()
+" vundle
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/vundle'
+
+" another plugin i use
+Plugin 'kien/ctrlp.vim'
+Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'Raimondi/delimitMate'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'ervandew/supertab'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-surround'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'bling/vim-airline'
 
 " Look and Feel
 syntax on
