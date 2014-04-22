@@ -1,17 +1,16 @@
-" no compatible with VI
+" no compatible with vi
 set nocompatible
 
-" vundle
+" vundle-required config
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 
-" another plugin i use
+" plugins to be installed via vundle
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'Raimondi/delimitMate'
@@ -26,6 +25,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
+
+" base16 colorscheme for vim
+Plugin 'chriskempson/base16-vim'
 
 " Look and Feel
 syntax on
