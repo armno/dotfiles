@@ -17,7 +17,8 @@ set t_Co=256
 "set list
 "set lcs=trail:·
 "set lcs=eol:
-" set listchars=tab:·,trail:$,eol:¬
+set list listchars=tab:»·,trail:·
+
 " show file name at title bar
 set title
 set showcmd
