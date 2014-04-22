@@ -31,7 +31,7 @@ Bundle 'plasticboy/vim-markdown'
 Plugin 'chriskempson/base16-vim'
 
 " don't let vundle mess with indentation
-filetype plugin on
+filetype on     " required
 
 " Look and Feel
 syntax on
