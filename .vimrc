@@ -1,8 +1,8 @@
-" no compatible with vi
+" meh
 set nocompatible
 
 " vundle-required config
-filetype off                  " required
+filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/vundle/
@@ -31,132 +31,68 @@ Bundle 'plasticboy/vim-markdown'
 Plugin 'chriskempson/base16-vim'
 
 " don't let vundle mess with indentation
-filetype on     " required
+filetype on
 
-" Look and Feel
-syntax on
-colorscheme Tomorrow-Night
-set background=dark
-set guifont:Inconsolata\ for\ Powerline:h20
-set ruler
-set number
+" ----- look and feel ----- "
+syntax on                       " enable syntax highlighting
+set background=dark             " use dark background to reduce tears level
+set t_Co=256                    " enable 256-color mode
+colorscheme Tomorrow-Night      " my favorite so far
+set ruler                       " show ruler (vim-airline will take care of this anyway)
+set number                      " show line numbers
+set title                       " show file name in title bar
+set hlsearch                    " highlight search researchs
+set showbreak=↪                 " display this character for line break
+set linespace=3                 " spaces between lines
+set cursorline                  " highlight current line where the cursor is at
+set scrolloff=5                 " number of lines to keep from the edge when scrolling
+if has('statusline')
+  set laststatus=2              " always show status line
+endif
 
-set t_Co=256
-" show invisible characters
-"set list
-"set lcs=trail:·
-"set lcs=eol:
-"set list listchars=tab:»·,trail:·
+" ---- general settings ----
+set mouse=a                     " enable mouse support in console
+set autoread                    " reload files when changed on disk
+set clipboard=unnamed           " use the same clipboard with osx
+set encoding=utf-8              " when in doubt, use utf-8
+set nobackup                    " who needs backup?
+set nowritebackup
+set noswapfile                  " who needs swap files?
+set binary                      " allow vim to edit binary files
+set showcmd                     " show typing command (bottom right)
 
-" show file name at title bar
-set title
-set showcmd
-set showbreak=↪
-" Code editing
+" ----- code editing -----
+set tabstop=2                   " use 2 spaces for a tab
+set shiftwidth=2                " use 2 spaces for indent
 set smartindent
-set tabstop=2
-set shiftwidth=2
 set autoindent
-" reload files when changed on disk
-set autoread
-" use the same clipboard with osx
-set clipboard=unnamed
-" split window to the bottom and the right (for vsp) by default
-set splitbelow
+set splitbelow                  " split window to the bottom and the right (for vsp) by default
 set splitright
-
-set encoding=utf-8
 set backspace=indent,eol,start
 set ch=1
-set linespace=3
 set expandtab
-set cursorline
+set noeol                       " no empty newlines at the end of lines
 
-set nobackup
-set nowritebackup
-set noswapfile
-
-" No empty newlines at the end of lines
-set binary
-set noeol
-
+" for code autocomplete
 set wildmenu
 set wildmode=list:longest
 
-" https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
-" number of lines to keep from the edge when scrolling
-set scrolloff=5
-" fix delay when type `O` (capital o) in normal mode
-set timeout timeoutlen=1000 ttimeoutlen=100
+set timeout timeoutlen=1000 ttimeoutlen=100  " fix delay when type `O` (capital o) in normal mode
 
-" key binding
+" ----- key bindings -----
 let mapleader=","
-" nmap <space> : - not really used
 imap <leader>e <esc>
 map <leader>c <c-_><c-_>
 map <leader>d :NERDTreeToggle<CR>
 nmap <leader>b :bn<CR>
 nmap <leader>B :bp<CR>
-
-" emmet
-imap <leader>t <C-y>,
 nmap noh :nohl<CR>
-nmap fx :FixWhitespace<CR>
 
-" easymotion
-map  / <Plug>(easymotion-sn)
-omap / <Plug>(easymotion-tn)
-map  n <Plug>(easymotion-next)
-map  N <Plug>(easymotion-prev)
-
-"automatically source .vimrc after save
-if has("autocmd")
-    autocmd bufwritepost .vimrc source $MYVIMRC
-endif
-
-" using vim-airline, only `laststatus` config needed here ...
-if has('statusline')
-  " Always show status line
-  set laststatus=2
-  " Broken down into easily includable segments
-  " Filename
-  " set statusline=%<%f
-  " Options
-  " set statusline+=%W%h%m%r
-  " Current directory
-  " set statusline+=\ [%{getcwd()}]
-  " Right aligned file nav info
-  " set statusline+=%=%-14.(%l,%c%c%)\ %p%%
-
-  " Vim Powerline
-  " Ubuntu
-  " set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-  " OSX 10.8
-  " set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
-endif
-
-"hide menu bar for gvim
-if has('gui_running')
-  set guioptions-=T  " no toolbar
-endif
-
-"enable mouse support in console
-set mouse=a
-
-"highlight search results
-set hlsearch
-
-" let g:neocomplcache_enable_at_startup=1
-
-" tab completion for neocomplcache plugin
-" inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+" disable  arrow keys O_O
+noremap <left> <nop>
+noremap <right> <nop>
+noremap <up> <nop>
+noremap <down> <nop>
 
 " Use ctrl-[hjkl] to select the active split!
 nmap <silent> <c-k> :wincmd k<CR>
@@ -164,11 +100,24 @@ nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
-" disable  arrow keys O_O
-noremap <left> <nop>
-noremap <right> <nop>
-noremap <up> <nop>
-noremap <down> <nop>
+" vim-trailingspace
+nmap fx :FixWhitespace<CR>
+
+" emmet
+imap <leader>t <C-y>,
+
+" easymotion
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 " Settings for vim-multicursor plugin
