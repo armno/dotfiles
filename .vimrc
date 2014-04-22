@@ -25,9 +25,13 @@ Plugin 'tpope/vim-surround'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
+Bundle 'plasticboy/vim-markdown'
 
 " base16 colorscheme for vim
 Plugin 'chriskempson/base16-vim'
+
+" don't let vundle mess with indentation
+filetype plugin on
 
 " Look and Feel
 syntax on
