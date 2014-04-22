@@ -31,6 +31,9 @@ set autoindent
 set autoread
 " use the same clipboard with osx
 set clipboard=unnamed
+" split window to the bottom and the right (for vsp) by default
+set splitbelow
+set splitright
 
 set encoding=utf-8
 set backspace=indent,eol,start
@@ -155,6 +158,9 @@ nnoremap <C-R> :CtrlPFunky<Cr>
 let g:airline_powerline_fonts = 1
 " enable displaying all buffers when only 1 tab is opened
 let g:airline#extensions#tabline#enabled = 1
+" use | instead of > for bufferline
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Settings for vim-gitgutter
 " always show sign column (gutter)

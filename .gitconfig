@@ -17,3 +17,5 @@
 [color "status"]
 	added = green
 	changed = yellow
+[core]
+	editor = /usr/local/bin/vim
