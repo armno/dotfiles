@@ -1,18 +1,18 @@
 # Armno's dotfiles
 
-> note to self: `sync.sh` is not used.
-
 ## setting up
 
 ```sh
 $ cd ~/code
-$ git clone --recursive git@github.com:armno/dotfiles.git
+$ git clone git@github.com:armno/dotfiles.git
 ```
-this will clone all submodules too (for plugins and colors).
 
 ### vim
 
 ```sh
+$ cd dotfiles
+$ git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
+$ vim +PluginInstall +qall
 $ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
 $ ln -s ~/code/dotfiles/.vim ~/.vim
 ```
@@ -29,16 +29,7 @@ $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 $ ln -s ~/code/dotfiles/.osx ~/.osx
 ```
 
-## adding new plugin
+## adding new plugin / updating existing plugins
 
-using [git submodules](http://git-scm.com/book/en/Git-Tools-Submodules)
+see [Vundle](https://github.com/gmarik/Vundle.vim)
 
-```sh
-$ git submodule add <repo_url> .vim/bundle/<directory_name>
-```
-
-updating dotfiles after added plugin
-
-```sh
-$ git submodule update --init
-```
