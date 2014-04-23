@@ -25,7 +25,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
-Bundle 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'scrooloose/syntastic'
 
 " base16 colorscheme for vim
 Plugin 'chriskempson/base16-vim'
@@ -70,7 +71,7 @@ set splitbelow                  " split window to the bottom and the right (for 
 set splitright
 set backspace=indent,eol,start
 set ch=1
-set expandtab                   " use space for tabs
+" set expandtab                   " use space for tabs
 set noeol                       " no empty newlines at the end of lines
 set wildmenu                    " enable code completion in enhanced mode
 set wildmode=list:longest       " list all matched strings in autocomplete
@@ -145,3 +146,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " vim-gitgutter
 let g:gitgutter_sign_column_always = 1              " always show sign column (gutter)
+
+" syntactic
+let g:syntastic_php_checkers = ['php']
