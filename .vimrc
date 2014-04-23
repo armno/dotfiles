@@ -71,7 +71,7 @@ set smartindent                 " be smart, even for indentation
 set autoindent
 set splitbelow                  " split window to the bottom and the right (for vsp) by default
 set splitright
-set backspace=indent,eol,start
+set backspace=indent,eol,start  " allow using backspace in insert mode
 set ch=1
 " set expandtab                   " use space for tabs
 set noeol                       " no empty newlines at the end of lines
