@@ -10,7 +10,7 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 
-" plugins to be installed via vundle
+" ----- plugins to be installed via vundle -----
 Plugin 'kien/ctrlp.vim'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'Raimondi/delimitMate'
@@ -30,7 +30,7 @@ Bundle 'plasticboy/vim-markdown'
 " base16 colorscheme for vim
 Plugin 'chriskempson/base16-vim'
 
-" don't let vundle mess with indentation
+" don't let vundle mess with indentation / folding for markdown files
 filetype on
 
 " ----- look and feel ----- "
@@ -64,47 +64,55 @@ set showcmd                     " show typing command (bottom right)
 " ----- code editing -----
 set tabstop=2                   " use 2 spaces for a tab
 set shiftwidth=2                " use 2 spaces for indent
-set smartindent
+set smartindent                 " be smart, even for indentation
 set autoindent
 set splitbelow                  " split window to the bottom and the right (for vsp) by default
 set splitright
 set backspace=indent,eol,start
 set ch=1
-set expandtab
+set expandtab                   " use space for tabs
 set noeol                       " no empty newlines at the end of lines
-
-" for code autocomplete
-set wildmenu
-set wildmode=list:longest
-
+set wildmenu                    " enable code completion in enhanced mode
+set wildmode=list:longest       " list all matched strings in autocomplete
 set timeout timeoutlen=1000 ttimeoutlen=100  " fix delay when type `O` (capital o) in normal mode
 
 " ----- key bindings -----
 let mapleader=","
 imap <leader>e <esc>
 map <leader>c <c-_><c-_>
-map <leader>d :NERDTreeToggle<CR>
 nmap <leader>b :bn<CR>
 nmap <leader>B :bp<CR>
 nmap noh :nohl<CR>
 
-" disable  arrow keys O_O
+" disable moving around with arrow keys in normal mode
 noremap <left> <nop>
 noremap <right> <nop>
 noremap <up> <nop>
 noremap <down> <nop>
 
-" Use ctrl-[hjkl] to select the active split!
+" Use ctrl-[hjkl] to select the active split
 nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
 
+" enable omni completion
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" ----- plugin-specific settings & key bindings ----- "
+
+" nerdtree
+map <leader>d :NERDTreeToggle<CR>
+
 " vim-trailingspace
 nmap fx :FixWhitespace<CR>
 
 " emmet
-imap <leader>t <C-y>,
+imap <leader><tab> <C-y>,
 
 " easymotion
 map  / <Plug>(easymotion-sn)
@@ -112,35 +120,28 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
-" Enable omni completion.
-autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-" Settings for vim-multicursor plugin
+" vim-multicursor
 let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<leader><leader>'
 
-" Settings for ctrlp-funky plugin
-nmap <C-p> CtrlP
+" ctrlp/ctrlp-funky plugins
+" nmap <C-p> CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
-nnoremap <C-R> :CtrlPFunky<Cr>
+nnoremap <leader>r :CtrlPFunky<Cr>
+" let g:ctrlp_show_hidden = 1                       " show hidden files in ctrlp (might slow down)
 
-" Settings for vim-airline
-" use powerline-patched fonts
-let g:airline_powerline_fonts = 1
-" enable displaying all buffers when only 1 tab is opened
-let g:airline#extensions#tabline#enabled = 1
-" use | instead of > for bufferline
-let g:airline#extensions#tabline#left_sep = ' '
+" vim-airline
+let g:airline_powerline_fonts = 1                   " use powerline-patched fonts
+let g:airline#extensions#tabline#enabled = 1        " enable displaying all buffers when only 1 tab is opened
+let g:airline#extensions#tabline#left_sep = ' '     " use | instead of > for bufferline
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
-" Settings for vim-gitgutter
-" always show sign column (gutter)
-let g:gitgutter_sign_column_always = 1
+" vim-gitgutter
+let g:gitgutter_sign_column_always = 1              " always show sign column (gutter)
