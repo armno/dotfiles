@@ -61,6 +61,8 @@ set nowritebackup
 set noswapfile                  " who needs swap files?
 set binary                      " allow vim to edit binary files
 set showcmd                     " show typing command (bottom right)
+set visualbell                  " enable vim's visual bell instead of beeeeeep
+set t_vb=                       " then visual bell does nothing. so no beeeeep
 
 " ----- code editing -----
 set tabstop=2                   " use 2 spaces for a tab
