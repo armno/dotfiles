@@ -130,7 +130,7 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<leader><leader>'
 
 " ctrlp/ctrlp-funky plugins
-" nmap <C-p> CtrlP
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " use ag to perform search (faster) https://github.com/ggreer/the_silver_searcher
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip

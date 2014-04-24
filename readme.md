@@ -17,6 +17,12 @@ $ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
 $ ln -s ~/code/dotfiles/.vim ~/.vim
 ```
 
+my vim setup requires [ag](https://github.com/ggreer/the_silver_searcher) which can be installed by
+
+```sh
+$ brew install the_silver_searcher
+```
+
 ### git
 
 ```sh
