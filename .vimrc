@@ -159,3 +159,4 @@ let g:gitgutter_sign_column_always = 1              " always show sign column (g
 
 " syntactic
 let g:syntastic_php_checkers = ['php']
+let g:syntastic_html_checkers=['']
