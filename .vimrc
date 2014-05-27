@@ -17,6 +17,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'ervandew/supertab'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-fugitive'
@@ -32,7 +33,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'chriskempson/base16-vim'
 
 " don't let vundle mess with indentation / folding for markdown files
-filetype on
+filetype plugin on
 
 " ----- look and feel ----- "
 syntax on                       " enable syntax highlighting
@@ -82,7 +83,7 @@ set timeout timeoutlen=1000 ttimeoutlen=100  " fix delay when type `O` (capital 
 " ----- key bindings -----
 let mapleader=","
 imap <leader>e <esc>
-map <leader>c <c-_><c-_>
+" map <leader>c <c-_><c-_>
 nmap <leader>b :bn<CR>
 nmap <leader>B :bp<CR>
 nmap noh :nohl<CR>
