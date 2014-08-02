@@ -1,3 +1,4 @@
+set shell=/bin/bash
 " meh
 set nocompatible
 
@@ -26,8 +27,9 @@ Plugin 'tpope/vim-surround'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
-Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/syntastic'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " base16 colorscheme for vim
 Plugin 'chriskempson/base16-vim'
@@ -161,3 +163,7 @@ let g:gitgutter_sign_column_always = 1              " always show sign column (g
 " syntactic
 let g:syntastic_php_checkers = ['php']
 let g:syntastic_html_checkers=['']
+
+" vim-markdown
+" disable folding when open markdown files
+let g:vim_markdown_folding_disabled=1
