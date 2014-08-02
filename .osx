@@ -46,6 +46,8 @@ defaults write com.apple.dock autohide-time-modifier -float 0
 
 # disable drop-shadow for screenshots captured
 defaults write com.apple.screencapture disable-shadow -bool true
+defaults write NSGlobalDomain NSUseLeopardWindowValues NO
+defaults write com.apple.Safari NSUseLeopardWindowValues YES
 
 # enable key repeat in non-terminal apps (mvim, sublime)
 defaults write -g ApplePressAndHoldEnabled -bool false

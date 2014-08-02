@@ -21,3 +21,5 @@
 	editor = /usr/local/bin/vim
 [advice]
 	statusHints = false
+[push]
+	default = simple
