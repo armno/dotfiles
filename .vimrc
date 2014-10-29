@@ -1,4 +1,4 @@
-set shell=/bin/bash
+set shell=/bin/zsh
 " meh
 set nocompatible
 
@@ -30,6 +30,7 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'vim-scripts/matchit.zip'
 
 " base16 colorscheme for vim
 Plugin 'chriskempson/base16-vim'
@@ -153,12 +154,13 @@ nnoremap <leader>r :CtrlPFunky<Cr>
 
 " vim-airline
 let g:airline_powerline_fonts = 1                   " use powerline-patched fonts
-let g:airline#extensions#tabline#enabled = 1        " enable displaying all buffers when only 1 tab is opened
+" let g:airline#extensions#tabline#enabled = 1        " enable displaying all buffers when only 1 tab is opened
 let g:airline#extensions#tabline#left_sep = ' '     " use | instead of > for bufferline
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " vim-gitgutter
 let g:gitgutter_sign_column_always = 1              " always show sign column (gutter)
+let g:gitgutter_max_signs = 5000
 
 " syntactic
 let g:syntastic_php_checkers = ['php']
