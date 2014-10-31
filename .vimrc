@@ -31,6 +31,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-scripts/matchit.zip'
+Plugin 'jelera/vim-javascript-syntax'
 
 " base16 colorscheme for vim
 Plugin 'chriskempson/base16-vim'
@@ -42,7 +43,7 @@ filetype plugin on
 syntax on                       " enable syntax highlighting
 set background=dark             " use dark background to reduce tears level
 set t_Co=256                    " enable 256-color mode
-colorscheme Tomorrow-Night      " my favorite so far
+colorscheme base16-railscasts
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar
