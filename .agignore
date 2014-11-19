@@ -1,0 +1,8 @@
+# Ignored files/directories patterns for ag.
+# (mostly) used with vim.
+# images
+*.png
+*.jpg
+*.gif
+*.icon
+*.ico
