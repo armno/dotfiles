@@ -1,3 +1,24 @@
+" ---- Armno's .vimrc ----
+" collection (and probably stolen ones) of vim configuration
+"
+" required:
+" 	- vundle: for managing plugins
+" 	- the silver searcher: (way) faster search (used with CtrlP)
+"
+" 		use `brew` to install silver search
+"
+" 		```sh
+" 		$ brew install the_silver_searcher
+" 		```
+"
+" 		then install vundle
+"
+" 		```sh
+" 		$ cd dotfiles
+" 		$ git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
+" 		```
+"
+
 set shell=/bin/zsh
 " meh
 set nocompatible
@@ -12,29 +33,28 @@ call vundle#rc()
 Plugin 'gmarik/vundle'
 
 " ----- plugins to be installed via vundle -----
-Plugin 'kien/ctrlp.vim'
-Plugin 'tacahiroy/ctrlp-funky'
-Plugin 'Raimondi/delimitMate'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'ervandew/supertab'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-fugitive'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-surround'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
-Plugin 'scrooloose/syntastic'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'jelera/vim-javascript-syntax'
+Plugin 'kien/ctrlp.vim' 											" sublime-text-like Cmd+P - navigate through files
+Plugin 'tacahiroy/ctrlp-funky' 								" sublime-text-like Cmd+R - navigate through functions
+Plugin 'Raimondi/delimitMate' 								" automatically close quotes, brackets
+Plugin 'editorconfig/editorconfig-vim' 				" enable .editorconfig support automatically
+Plugin 'mattn/emmet-vim' 											" emmet (formerly zen coding) for vim
+Plugin 'scrooloose/nerdtree' 									" display directories and files list
+Plugin 'ervandew/supertab' 										" enable using <tab> for completion
+Plugin 'Lokaltog/vim-easymotion' 							" make search better
+Plugin 'tpope/vim-fugitive' 									" git support in vim
+Plugin 'terryma/vim-multiple-cursors' 				" sublime-text-likd Cmd+d - multiple cursors
+Plugin 'tpope/vim-surround' 									" easily manipulate surrounding tags/characters
+Plugin 'tomtom/tcomment_vim' 									" commenting made easy
+Plugin 'bronson/vim-trailing-whitespace' 			" highlight whitespace in red
+Plugin 'airblade/vim-gitgutter' 							" display git status in vim's gutter
+Plugin 'bling/vim-airline' 										" an alternative (and lighter) to powerline
+Plugin 'scrooloose/syntastic' 								" syntax checker
+Plugin 'godlygeek/tabular' 										" plugin for aligning text, required for vim-markdown
+Plugin 'plasticboy/vim-markdown' 							" enable mardown syntax support
+Plugin 'vim-scripts/matchit.zip' 							" make % highlights mating tags
+Plugin 'pangloss/vim-javascript' 							" syntax and indent plugin for javascript
 
-" base16 colorscheme for vim
-Plugin 'chriskempson/base16-vim'
+Plugin 'chriskempson/base16-vim' 							" base16 colorscheme for vim
 
 " don't let vundle mess with indentation / folding for markdown files
 filetype plugin on
@@ -78,7 +98,6 @@ set splitbelow                  " split window to the bottom and the right (for 
 set splitright
 set backspace=indent,eol,start  " allow using backspace in insert mode
 set ch=1
-" set expandtab                   " use space for tabs
 set noeol                       " no empty newlines at the end of lines
 set wildmenu                    " enable code completion in enhanced mode
 set wildmode=list:longest       " list all matched strings in autocomplete
@@ -87,7 +106,6 @@ set timeout timeoutlen=1000 ttimeoutlen=100  " fix delay when type `O` (capital 
 " ----- key bindings -----
 let mapleader=","
 imap <leader>e <esc>
-" map <leader>c <c-_><c-_>
 nmap <leader>b :bn<CR>
 nmap <leader>B :bp<CR>
 nmap noh :nohl<CR>
@@ -166,6 +184,7 @@ let g:gitgutter_max_signs = 5000
 " syntactic
 let g:syntastic_php_checkers = ['php']
 let g:syntastic_html_checkers=['']
+let g:syntastic_javascript_gjslint_conf = "-nojsdoc"
 
 " vim-markdown
 " disable folding when open markdown files
