@@ -32,27 +32,28 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 
-" ----- plugins to be installed via vundle -----
-Plugin 'kien/ctrlp.vim' 											" sublime-text-like Cmd+P - navigate through files
-Plugin 'tacahiroy/ctrlp-funky' 								" sublime-text-like Cmd+R - navigate through functions
-Plugin 'Raimondi/delimitMate' 								" automatically close quotes, brackets
-Plugin 'editorconfig/editorconfig-vim' 				" enable .editorconfig support automatically
-Plugin 'mattn/emmet-vim' 											" emmet (formerly zen coding) for vim
-Plugin 'scrooloose/nerdtree' 									" display directories and files list
-Plugin 'ervandew/supertab' 										" enable using <tab> for completion
-Plugin 'Lokaltog/vim-easymotion' 							" make search better
-Plugin 'tpope/vim-fugitive' 									" git support in vim
-Plugin 'terryma/vim-multiple-cursors' 				" sublime-text-likd Cmd+d - multiple cursors
-Plugin 'tpope/vim-surround' 									" easily manipulate surrounding tags/characters
-Plugin 'tomtom/tcomment_vim' 									" commenting made easy
-Plugin 'bronson/vim-trailing-whitespace' 			" highlight whitespace in red
-Plugin 'airblade/vim-gitgutter' 							" display git status in vim's gutter
-Plugin 'bling/vim-airline' 										" an alternative (and lighter) to powerline
-Plugin 'scrooloose/syntastic' 								" syntax checker
-Plugin 'godlygeek/tabular' 										" plugin for aligning text, required for vim-markdown
-Plugin 'plasticboy/vim-markdown' 							" enable mardown syntax support
-Plugin 'vim-scripts/matchit.zip' 							" make % highlights mating tags
-Plugin 'pangloss/vim-javascript' 							" syntax and indent plugin for javascript
+                                         " ----- plugins to be installed via vundle -----
+Plugin 'kien/ctrlp.vim'                  " sublime-text-like Cmd+P - navigate through files
+Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
+Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
+Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
+Plugin 'mattn/emmet-vim'                 " emmet (formerly zen coding) for vim
+Plugin 'scrooloose/nerdtree'             " display directories and files list
+Plugin 'scrooloose/nerdcommenter'        " another comment plugin
+Plugin 'ervandew/supertab'               " enable using <tab> for completion
+Plugin 'Lokaltog/vim-easymotion'         " make search better
+Plugin 'tpope/vim-fugitive'              " git support in vim
+Plugin 'terryma/vim-multiple-cursors'    " sublime-text-likd Cmd+d - multiple cursors
+Plugin 'tpope/vim-surround'              " easily manipulate surrounding tags/characters
+Plugin 'tomtom/tcomment_vim'             " commenting made easy
+Plugin 'bronson/vim-trailing-whitespace' " highlight whitespace in red
+Plugin 'airblade/vim-gitgutter'          " display git status in vim's gutter
+Plugin 'bling/vim-airline'               " an alternative (and lighter) to powerline
+Plugin 'scrooloose/syntastic'            " syntax checker
+Plugin 'godlygeek/tabular'               " plugin for aligning text, required for vim-markdown
+Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
+Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
+Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
 
 Plugin 'chriskempson/base16-vim' 							" base16 colorscheme for vim
 
@@ -90,18 +91,18 @@ set visualbell                  " enable vim's visual bell instead of beeeeeep
 set t_vb=                       " then visual bell does nothing. so no beeeeep
 
 " ----- code editing -----
-set tabstop=2                   " use 2 spaces for a tab
-set shiftwidth=2                " use 2 spaces for indent
-set smartindent                 " be smart, even for indentation
+set tabstop=2                               " use 2 spaces for a tab
+set shiftwidth=2                            " use 2 spaces for indent
+set smartindent                             " be smart, even for indentation
 set autoindent
-set splitbelow                  " split window to the bottom and the right (for vsp) by default
+set splitbelow                              " split window to the bottom and the right (for vsp) by default
 set splitright
-set backspace=indent,eol,start  " allow using backspace in insert mode
+set backspace=indent,eol,start              " allow using backspace in insert mode
 set ch=1
-set noeol                       " no empty newlines at the end of lines
-set wildmenu                    " enable code completion in enhanced mode
-set wildmode=list:longest       " list all matched strings in autocomplete
-set timeout timeoutlen=1000 ttimeoutlen=100  " fix delay when type `O` (capital o) in normal mode
+set noeol                                   " no empty newlines at the end of lines
+set wildmenu                                " enable code completion in enhanced mode
+set wildmode=list:longest                   " list all matched strings in autocomplete
+set timeout timeoutlen=1000 ttimeoutlen=100 " fix delay when type `O` (capital o) in normal mode
 
 " ----- key bindings -----
 let mapleader=","
@@ -173,7 +174,6 @@ nnoremap <leader>r :CtrlPFunky<Cr>
 
 " vim-airline
 let g:airline_powerline_fonts = 1                   " use powerline-patched fonts
-" let g:airline#extensions#tabline#enabled = 1        " enable displaying all buffers when only 1 tab is opened
 let g:airline#extensions#tabline#left_sep = ' '     " use | instead of > for bufferline
 let g:airline#extensions#tabline#left_alt_sep = '|'
 

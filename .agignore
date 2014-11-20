@@ -6,3 +6,6 @@
 *.gif
 *.icon
 *.ico
+
+# videos
+*.mp4
