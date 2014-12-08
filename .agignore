@@ -9,3 +9,6 @@
 
 # videos
 *.mp4
+
+# compiled & built files
+dist/
