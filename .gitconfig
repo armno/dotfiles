@@ -1,6 +1,8 @@
 [user]
 	name = Armno
 	email = monkeyarmno@gmail.com
+[merge]
+	ff = false
 [mergetool]
 	keepBackup = true
 [color]
