@@ -28,6 +28,8 @@ adding new plugin / updating existing plugins, see [Vundle](https://github.com/g
 
 ### git
 
+fyi: i always use non fast-forward merge strategy.
+
 ```sh
 $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 ```
