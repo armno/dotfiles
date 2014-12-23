@@ -77,7 +77,9 @@ set scrolloff=5                 " number of lines to keep from the edge when scr
 if has('statusline')
   set laststatus=2              " always show status line
 endif
-
+" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set lcs=tab:⤑\ ,trail:·,eol:¬
+set list
 " ---- general settings ----
 set mouse=a                     " enable mouse support in console
 set autoread                    " reload files when changed on disk
