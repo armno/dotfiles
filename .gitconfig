@@ -18,6 +18,8 @@
 	sup = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --author=armno
 	st = status -sb
 	fo = fetch origin
+	conflicts = diff --diff-filter=U
+	ldm = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --author=armno --no-merges --date=relative
 [color "status"]
 	added = green
 	changed = yellow

@@ -49,12 +49,12 @@ Plugin 'tomtom/tcomment_vim'             " commenting made easy
 Plugin 'bronson/vim-trailing-whitespace' " highlight whitespace in red
 Plugin 'airblade/vim-gitgutter'          " display git status in vim's gutter
 Plugin 'bling/vim-airline'               " an alternative (and lighter) to powerline
-Plugin 'scrooloose/syntastic'            " syntax checker
+" Plugin 'scrooloose/syntastic'            " syntax checker
 Plugin 'godlygeek/tabular'               " plugin for aligning text, required for vim-markdown
 Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
 Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
-
+Plugin 'wookiehangover/jshint.vim'
 Plugin 'chriskempson/base16-vim' 							" base16 colorscheme for vim
 
 " don't let vundle mess with indentation / folding for markdown files
@@ -92,6 +92,9 @@ set binary                      " allow vim to edit binary files
 set showcmd                     " show typing command (bottom right)
 set visualbell                  " enable vim's visual bell instead of beeeeeep
 set t_vb=                       " then visual bell does nothing. so no beeeeep
+set ttyfast                     " fast terminal connection between terminal and vim
+set ttyscroll=3
+set lazyredraw
 
 " ----- code editing -----
 set tabstop=2                               " use 2 spaces for a tab
@@ -186,10 +189,18 @@ let g:gitgutter_sign_column_always = 1              " always show sign column (g
 let g:gitgutter_max_signs = 5000
 
 " syntactic
-let g:syntastic_php_checkers = ['php']
-let g:syntastic_html_checkers=['']
-let g:syntastic_javascript_gjslint_conf = "-nojsdoc"
+" let g:syntastic_php_checkers = ['php']
+" let g:syntastic_html_checkers=['']
+" let g:syntastic_javascript_gjslint_conf = "-nojsdoc"
 
 " vim-markdown
 " disable folding when open markdown files
 let g:vim_markdown_folding_disabled=1
+
+" vim-syntaxhighlighther
+" prevent super slow for lengthy lines
+set synmaxcol=120
+
+" vim-jshint
+" hint only on save
+let JSHintUpdateWriteOnly=1

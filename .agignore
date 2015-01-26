@@ -12,3 +12,6 @@
 
 # compiled & built files
 dist/
+
+# this is pretty mean
+*.css
