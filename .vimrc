@@ -68,7 +68,7 @@ syntax on                       " enable syntax highlighting
 set background=dark             " use dark background to reduce tears level
 set t_Co=256                    " enable 256-color mode
 let base16colorspace=256
-colorscheme base16-railscasts
+colorscheme base16-ocean
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar
@@ -82,7 +82,7 @@ if has('statusline')
 endif
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set lcs=tab:⤑\ ,trail:·,eol:¬
-set list
+set nolist
 " ---- general settings ----
 set mouse=a                     " enable mouse support in console
 set autoread                    " reload files when changed on disk
