@@ -18,10 +18,10 @@ $ brew install the_silver_searcher
 then set up vim and vundle.
 
 ```sh
+$ ln -s ~/code/dotfiles/.vim ~/.vim
 $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 $ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
 $ vim +PluginInstall +qall
-$ ln -s ~/code/dotfiles/.vim ~/.vim
 ```
 
 adding new plugin / updating existing plugins, see [Vundle](https://github.com/gmarik/Vundle.vim)

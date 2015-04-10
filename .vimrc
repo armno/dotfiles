@@ -5,7 +5,7 @@
 " 	- vundle: for managing plugins
 " 	- the silver searcher: (way) faster search (used with CtrlP)
 "
-" 		use `brew` to install silver search
+" 		use `brew` to install silver searcher
 "
 " 		```sh
 " 		$ brew install the_silver_searcher
@@ -27,10 +27,9 @@ set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Plugin 'gmarik/vundle'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
 
                                          " ----- plugins to be installed via vundle -----
 Plugin 'kien/ctrlp.vim'                  " sublime-text-like Cmd+P - navigate through files
@@ -42,20 +41,24 @@ Plugin 'scrooloose/nerdtree'             " display directories and files list
 Plugin 'scrooloose/nerdcommenter'        " another comment plugin
 Plugin 'ervandew/supertab'               " enable using <tab> for completion
 Plugin 'Lokaltog/vim-easymotion'         " make search better
-Plugin 'tpope/vim-fugitive'              " git support in vim
+" Plugin 'tpope/vim-fugitive'              " git support in vim
 Plugin 'terryma/vim-multiple-cursors'    " sublime-text-likd Cmd+d - multiple cursors
 Plugin 'tpope/vim-surround'              " easily manipulate surrounding tags/characters
-Plugin 'tomtom/tcomment_vim'             " commenting made easy
+" Plugin 'tomtom/tcomment_vim'             " commenting made easy
 Plugin 'bronson/vim-trailing-whitespace' " highlight whitespace in red
 Plugin 'airblade/vim-gitgutter'          " display git status in vim's gutter
 Plugin 'bling/vim-airline'               " an alternative (and lighter) to powerline
 " Plugin 'scrooloose/syntastic'            " syntax checker
-Plugin 'godlygeek/tabular'               " plugin for aligning text, required for vim-markdown
+" Plugin 'godlygeek/tabular'               " plugin for aligning text, required for vim-markdown
 Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
 Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
 Plugin 'wookiehangover/jshint.vim'
-Plugin 'chriskempson/base16-vim' 							" base16 colorscheme for vim
+Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
+Plugin 'xsbeats/vim-blade'
+Plugin 'mxw/vim-jsx'
+
+call vundle#end()            " required
 
 " don't let vundle mess with indentation / folding for markdown files
 filetype plugin on
@@ -199,7 +202,7 @@ let g:vim_markdown_folding_disabled=1
 
 " vim-syntaxhighlighther
 " prevent super slow for lengthy lines
-set synmaxcol=120
+set synmaxcol=200
 
 " vim-jshint
 " hint only on save
