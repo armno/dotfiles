@@ -47,3 +47,15 @@ $ ln -s ~/code/dotfiles/.osx ~/.osx
 ```sh
 $ ln -s ~/code/dotfiles/.agignore ~/.agignore
 ```
+
+### prezto
+
+use my customized cloud theme for prezto.
+
+```sh
+$ ln -s ~/code/dotfiles/prompt_armno_setup ~/.zprezto/modules/prompt/functions/prompt_armno_setup
+```
+
+then change `theme` option in `~/.zpreztorc` file to `armno`
+
+![modified cloud theme](screenshot.png)
