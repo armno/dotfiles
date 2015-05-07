@@ -82,7 +82,7 @@ function prompt_cloud_setup {
   if [[ -n "$1" ]]; then
     prefix="$1"
   else
-    prefix='☁'
+    prefix=''
   fi
 
   # Assign colors.
@@ -115,7 +115,7 @@ function prompt_cloud_setup {
 
   # Define prompts.
   PROMPT='%B%F{$secondary_color}%c%f%b ${git_info:+${(e)git_info[prompt]}}'
-	PROMPT=$PROMPT$'\n%B%F{$primary_color}${prefix}%f%b  '
+	PROMPT=$PROMPT$'\n%B%F{$primary_color}${prefix}%f%b '
   RPROMPT=''
 }
 
