@@ -57,6 +57,7 @@ Plugin 'wookiehangover/jshint.vim'
 Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
 Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()            " required
 
