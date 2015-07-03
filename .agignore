@@ -12,6 +12,7 @@
 
 # compiled & built files
 dist/
+release/
 
 # this is pretty mean
 # *.css
