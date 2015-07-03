@@ -40,6 +40,13 @@ $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 $ ln -s ~/code/dotfiles/.osx ~/.osx
 ```
 
+### aliases, functions
+
+```sh
+$ ln -s ~/code/dotfiles/.aliases ~/.aliases
+$ ln -s ~/code/dotfiles/.functions ~/.functions
+```
+
 ### ag
 
 `ag`'s ignored patterns. normally `ag` ignores patterns in `.gitignore` file but still, there are some files in the repo that shouldn't show up in `CtrlP`.

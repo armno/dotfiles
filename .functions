@@ -1,0 +1,11 @@
+# Create a new directory and cd into it
+function create() {
+	mkdir -p "$@" && cd "$_";
+}
+
+# clone a repo from url (https|git) and cd into it
+function clone() {
+	local url=$1;
+	local repo=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
+	git clone $url $repo && cd $repo;
+}
