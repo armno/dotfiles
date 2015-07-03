@@ -40,10 +40,11 @@ $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 $ ln -s ~/code/dotfiles/.osx ~/.osx
 ```
 
-### aliases
+### aliases, functions
 
 ```sh
 $ ln -s ~/code/dotfiles/.aliases ~/.aliases
+$ ln -s ~/code/dotfiles/.functions ~/.functions
 ```
 
 ### ag
