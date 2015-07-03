@@ -52,3 +52,6 @@ defaults write com.apple.Safari NSUseLeopardWindowValues YES
 # enable key repeat in non-terminal apps (mvim, sublime)
 defaults write -g ApplePressAndHoldEnabled -bool false
 defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+
+# disable version control for sketch
+defaults write -app 'sketch' ApplePersistence -bool no
