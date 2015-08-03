@@ -37,12 +37,12 @@ Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate th
 Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
 Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
 Plugin 'mattn/emmet-vim'                 " emmet (formerly zen coding) for vim
-Plugin 'scrooloose/nerdtree'             " display directories and files list
-Plugin 'scrooloose/nerdcommenter'        " another comment plugin
+" Plugin 'scrooloose/nerdtree'             " display directories and files list
+" Plugin 'scrooloose/nerdcommenter'        " another comment plugin
 Plugin 'ervandew/supertab'               " enable using <tab> for completion
 Plugin 'Lokaltog/vim-easymotion'         " make search better
 " Plugin 'tpope/vim-fugitive'              " git support in vim
-Plugin 'terryma/vim-multiple-cursors'    " sublime-text-likd Cmd+d - multiple cursors
+" Plugin 'terryma/vim-multiple-cursors'    " sublime-text-likd Cmd+d - multiple cursors
 Plugin 'tpope/vim-surround'              " easily manipulate surrounding tags/characters
 " Plugin 'tomtom/tcomment_vim'             " commenting made easy
 Plugin 'bronson/vim-trailing-whitespace' " highlight whitespace in red
@@ -55,7 +55,7 @@ Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
 Plugin 'wookiehangover/jshint.vim'
 Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
-Plugin 'xsbeats/vim-blade'
+" Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Valloric/YouCompleteMe'
@@ -150,7 +150,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " ----- plugin-specific settings & key bindings ----- "
 
 " nerdtree
-map <leader>d :NERDTreeToggle<CR>
+" map <leader>d :NERDTreeToggle<CR>
 
 " vim-trailingspace
 nmap fx :FixWhitespace<CR>
@@ -171,18 +171,13 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<leader><leader>'
 
 " ctrlp/ctrlp-funky plugins
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""' " use ag to perform search (faster) https://github.com/ggreer/the_silver_searcher
+let g:ctrlp_user_command = 'ag %s --hidden -l --nocolor -g ""' " use ag to perform search (faster) https://github.com/ggreer/the_silver_searcher
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules|_site',
-    \ 'file': '\v\.(exe|so|dll|png|jpg|gif|ico)$'
-    \ }
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 nnoremap <leader>r :CtrlPFunky<Cr>
-" let g:ctrlp_show_hidden = 1                       " show hidden files in ctrlp (might slow down)
 
 " vim-airline
 let g:airline_powerline_fonts = 1                   " use powerline-patched fonts

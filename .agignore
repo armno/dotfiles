@@ -1,4 +1,6 @@
 # Ignored files/directories patterns for ag.
+.git/
+
 # (mostly) used with vim.
 # images
 *.png
