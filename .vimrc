@@ -37,7 +37,7 @@ Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate th
 Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
 Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
 Plugin 'mattn/emmet-vim'                 " emmet (formerly zen coding) for vim
-" Plugin 'scrooloose/nerdtree'             " display directories and files list
+Plugin 'scrooloose/nerdtree'             " display directories and files list
 " Plugin 'scrooloose/nerdcommenter'        " another comment plugin
 Plugin 'ervandew/supertab'               " enable using <tab> for completion
 Plugin 'Lokaltog/vim-easymotion'         " make search better
@@ -150,7 +150,7 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 " ----- plugin-specific settings & key bindings ----- "
 
 " nerdtree
-" map <leader>d :NERDTreeToggle<CR>
+map <leader>d :NERDTreeToggle<CR>
 
 " vim-trailingspace
 nmap fx :FixWhitespace<CR>
