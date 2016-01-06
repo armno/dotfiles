@@ -9,10 +9,11 @@ $ git clone git@github.com:armno/dotfiles.git
 
 ### vim
 
-my vim setup requires [ag](https://github.com/ggreer/the_silver_searcher) which can be installed by
+my vim setup requires [ag](https://github.com/ggreer/the_silver_searcher)
+and [editorconfig](http://editorconfig.org), which can be installed by
 
 ```sh
-$ brew install the_silver_searcher
+$ brew install the_silver_searcher editorconfig
 ```
 
 then set up vim and vundle.
@@ -28,7 +29,7 @@ adding new plugin / updating existing plugins, see [Vundle](https://github.com/g
 
 ### git
 
-fyi: i always use non fast-forward merge strategy.
+fyi: non fast-forward merge strategy is my default git config.
 
 ```sh
 $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
