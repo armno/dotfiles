@@ -20,7 +20,7 @@ then set up vim and vundle.
 
 ```sh
 $ ln -s ~/code/dotfiles/.vim ~/.vim
-$ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 $ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
 $ vim +PluginInstall +qall
 ```
