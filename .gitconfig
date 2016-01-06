@@ -36,7 +36,7 @@
 	newNormal = "green bold"
 	newHighlight = "green bold 22"
 [core]
-	editor = mvim -v
+	editor = vim
 	autocrlf = false
 	filemode = false
 	pager = diff-highlight | less -r

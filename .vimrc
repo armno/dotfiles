@@ -19,6 +19,7 @@
 " 		```
 "
 
+let g:python_host_prog = '/usr/local/bin/python'
 set shell=/bin/zsh
 " meh
 set nocompatible
@@ -29,7 +30,8 @@ filetype off
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+
+Plugin 'VundleVim/Vundle.vim'
 
                                          " ----- plugins to be installed via vundle -----
 Plugin 'kien/ctrlp.vim'                  " sublime-text-like Cmd+P - navigate through files
@@ -37,7 +39,7 @@ Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate th
 Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
 Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
 Plugin 'mattn/emmet-vim'                 " emmet (formerly zen coding) for vim
-Plugin 'scrooloose/nerdtree'             " display directories and files list
+" Plugin 'scrooloose/nerdtree'             " display directories and files list
 " Plugin 'scrooloose/nerdcommenter'        " another comment plugin
 Plugin 'ervandew/supertab'               " enable using <tab> for completion
 Plugin 'Lokaltog/vim-easymotion'         " make search better
@@ -55,10 +57,10 @@ Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
 Plugin 'wookiehangover/jshint.vim'
 Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
-" Plugin 'xsbeats/vim-blade'
+Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()            " required
 
@@ -98,7 +100,11 @@ set showcmd                     " show typing command (bottom right)
 set visualbell                  " enable vim's visual bell instead of beeeeeep
 set t_vb=                       " then visual bell does nothing. so no beeeeep
 set ttyfast                     " fast terminal connection between terminal and vim
-set ttyscroll=3
+
+if !has('nvim')
+	set ttyscroll=3
+endif
+
 set lazyredraw
 
 " ----- code editing -----
@@ -122,6 +128,9 @@ imap <leader>e <esc>
 nmap <leader>b :bn<CR>
 nmap <leader>B :bp<CR>
 nmap noh :nohl<CR>
+
+" netrw (file explorer)
+map <leader>d :Explore<CR>
 
 " disable moving around with arrow keys in normal mode
 noremap <left> <nop>
@@ -148,9 +157,6 @@ autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 " ----- plugin-specific settings & key bindings ----- "
-
-" nerdtree
-map <leader>d :NERDTreeToggle<CR>
 
 " vim-trailingspace
 nmap fx :FixWhitespace<CR>
@@ -188,11 +194,6 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:gitgutter_sign_column_always = 1              " always show sign column (gutter)
 let g:gitgutter_max_signs = 5000
 
-" syntactic
-" let g:syntastic_php_checkers = ['php']
-" let g:syntastic_html_checkers=['']
-" let g:syntastic_javascript_gjslint_conf = "-nojsdoc"
-
 " vim-markdown
 " disable folding when open markdown files
 let g:vim_markdown_folding_disabled=1
@@ -204,3 +205,6 @@ set synmaxcol=200
 " vim-jshint
 " hint only on save
 let JSHintUpdateWriteOnly=1
+
+" autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
+let g:netrw_liststyle=3

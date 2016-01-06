@@ -19,5 +19,9 @@ release/
 node_modules/
 bower_components/
 
+# laravel thingy
+vendor/
+storage/
+
 # this is pretty mean
 # *.css
