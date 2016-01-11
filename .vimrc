@@ -39,19 +39,13 @@ Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate th
 Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
 Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
 Plugin 'mattn/emmet-vim'                 " emmet (formerly zen coding) for vim
-" Plugin 'scrooloose/nerdtree'             " display directories and files list
-" Plugin 'scrooloose/nerdcommenter'        " another comment plugin
 Plugin 'ervandew/supertab'               " enable using <tab> for completion
 Plugin 'Lokaltog/vim-easymotion'         " make search better
-" Plugin 'tpope/vim-fugitive'              " git support in vim
-" Plugin 'terryma/vim-multiple-cursors'    " sublime-text-likd Cmd+d - multiple cursors
 Plugin 'tpope/vim-surround'              " easily manipulate surrounding tags/characters
-" Plugin 'tomtom/tcomment_vim'             " commenting made easy
 Plugin 'bronson/vim-trailing-whitespace' " highlight whitespace in red
 Plugin 'airblade/vim-gitgutter'          " display git status in vim's gutter
 Plugin 'bling/vim-airline'               " an alternative (and lighter) to powerline
-" Plugin 'scrooloose/syntastic'            " syntax checker
-" Plugin 'godlygeek/tabular'               " plugin for aligning text, required for vim-markdown
+Plugin 'godlygeek/tabular'               " plugin for aligning text, required for vim-markdown
 Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
 Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
@@ -60,8 +54,8 @@ Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
 Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
-" Plugin 'Valloric/YouCompleteMe'
 Plugin 'ternjs/tern_for_vim'
+Plugin 'rking/ag.vim'
 
 call vundle#end()            " required
 
@@ -171,20 +165,29 @@ omap / <Plug>(easymotion-tn)
 map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
-" vim-multicursor
-let g:multi_cursor_next_key='<C-n>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<leader><leader>'
-
 " ctrlp/ctrlp-funky plugins
 let g:ctrlp_user_command = 'ag %s --hidden -l --nocolor -g ""' " use ag to perform search (faster) https://github.com/ggreer/the_silver_searcher
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_use_caching = 0                         " ag is fast enough that CtrlP doesn't need to cache
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_extensions = ['funky']
 let g:ctrlp_funky_syntax_highlight = 1
 nnoremap <leader>r :CtrlPFunky<Cr>
+
+" The Silver Searcher
+" https://robots.thoughtbot.com/faster-grepping-in-vim
+" Use `ag` over `grep`
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
+
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" bind Ctrl-F to grep shortcut
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap <C-F> :Ag<SPACE>
 
 " vim-airline
 let g:airline_powerline_fonts = 1                   " use powerline-patched fonts
@@ -207,5 +210,5 @@ set synmaxcol=200
 " hint only on save
 let JSHintUpdateWriteOnly=1
 
-" autocmd FileType c nnoremap <buffer> <silent> <C-]> :YcmCompleter GoTo<cr>
+" netrw directory style
 let g:netrw_liststyle=3
