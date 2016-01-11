@@ -206,6 +206,10 @@ let g:vim_markdown_folding_disabled=1
 " prevent super slow for lengthy lines
 set synmaxcol=200
 
+" vim-jsx
+" enable jsx syntax highlighting for non-jsx extensions
+let g:jsx_ext_required = 0
+
 " vim-jshint
 " hint only on save
 let JSHintUpdateWriteOnly=1
