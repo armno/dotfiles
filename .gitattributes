@@ -1,1 +1,6 @@
 * text=auto
+
+# treat these files as binary so they don't mess diff view (these files are compiled ones)
+*.map binary
+*.min.js binary
+*.min.css binary
