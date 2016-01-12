@@ -7,6 +7,20 @@ $ cd ~/code
 $ git clone git@github.com:armno/dotfiles.git
 ```
 
+### base16-shell
+
+install it [here](https://github.com/chriskempson/base16-shell)
+
+### oh-my-zsh
+
+use my customized cloud theme for [oh-my-zsh](http://ohmyz.sh/). assuming oh-my-zsh is installed:
+
+```sh
+$ ln -s ~/code/dotfiles/cloud-armno.zsh-theme ~/.oh-my-zsh/themes/cloud-armno.zsh-theme
+```
+
+then change `ZSH_THEME` option in `~/.zshrc` file to `cloud-armno`
+
 ### vim
 
 my vim setup requires [ag](https://github.com/ggreer/the_silver_searcher)
@@ -55,15 +69,5 @@ $ ln -s ~/code/dotfiles/.functions ~/.functions
 ```sh
 $ ln -s ~/code/dotfiles/.agignore ~/.agignore
 ```
-
-### prezto
-
-use my customized cloud theme for prezto.
-
-```sh
-$ ln -s ~/code/dotfiles/prompt_armno_setup ~/.zprezto/modules/prompt/functions/prompt_armno_setup
-```
-
-then change `theme` option in `~/.zpreztorc` file to `armno`
 
 ![modified cloud theme](screenshot.png)
