@@ -15,6 +15,7 @@
 # compiled & built files
 dist/
 release/
+!release/img/
 
 node_modules/
 bower_components/

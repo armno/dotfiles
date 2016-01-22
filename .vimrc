@@ -38,13 +38,12 @@ Plugin 'kien/ctrlp.vim'                  " sublime-text-like Cmd+P - navigate th
 Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
 Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
 Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
-Plugin 'mattn/emmet-vim'                 " emmet (formerly zen coding) for vim
+Plugin 'mattn/emmet-vim'                 " emmet for vim
 Plugin 'ervandew/supertab'               " enable using <tab> for completion
 Plugin 'Lokaltog/vim-easymotion'         " make search better
 Plugin 'tpope/vim-surround'              " easily manipulate surrounding tags/characters
 Plugin 'bronson/vim-trailing-whitespace' " highlight whitespace in red
 Plugin 'airblade/vim-gitgutter'          " display git status in vim's gutter
-Plugin 'bling/vim-airline'               " an alternative (and lighter) to powerline
 Plugin 'godlygeek/tabular'               " plugin for aligning text, required for vim-markdown
 Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
 Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
@@ -56,6 +55,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'rking/ag.vim'
+Plugin 'cakebaker/scss-syntax.vim'
 
 call vundle#end()            " required
 
