@@ -9,3 +9,10 @@ function clone() {
 	local repo=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
 	git clone $url $repo && cd $repo;
 }
+
+# start new project with my 101 files
+function start() {
+	local name=$1;
+	local repo=git@github.com:armno/101.git
+	git clone $repo $name && cd $name && rm -rf .git;
+}
