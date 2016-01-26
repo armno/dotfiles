@@ -14,5 +14,8 @@ function clone() {
 function start() {
 	local name=$1;
 	local repo=git@github.com:armno/101.git
+	echo "$fg[yellow]Starting new project: $name $reset_color";
 	git clone $repo $name && cd $name && rm -rf .git;
+	echo "$fg[yellow]Initializing Git Repo$reset_color";
+	git init;
 }
