@@ -19,7 +19,11 @@ function start() {
 	echo "$fg[yellow]Initializing Git Repo$reset_color";
 	git init;
 
+	# empty the readme.md
+	echo "# $name" > readme.md;
+
 	echo "\n";
 	echo "$fg[yellow]Creating package.json$reset_color";
 	npm init;
+
 }
