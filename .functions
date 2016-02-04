@@ -18,4 +18,8 @@ function start() {
 	git clone $repo $name && cd $name && rm -rf .git;
 	echo "$fg[yellow]Initializing Git Repo$reset_color";
 	git init;
+
+	echo "\n";
+	echo "$fg[yellow]Creating package.json$reset_color";
+	npm init;
 }
