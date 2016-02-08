@@ -53,7 +53,7 @@ Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
 Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
-Plugin 'ternjs/tern_for_vim'
+" Plugin 'ternjs/tern_for_vim'
 Plugin 'rking/ag.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 
