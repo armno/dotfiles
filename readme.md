@@ -45,9 +45,12 @@ adding new plugin / updating existing plugins, see [Vundle](https://github.com/g
 
 ### git
 
-fyi: non fast-forward merge strategy is my default git config.
+- non fast-forward merge strategy is my default git config.
+- `git diff` is using [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 
 ```sh
+$ npm install -g diff-so-fancy
+$ brew install gnu-sed
 $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 ```
 
