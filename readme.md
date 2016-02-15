@@ -13,7 +13,9 @@ install it [here](https://github.com/chriskempson/base16-shell)
 
 ### oh-my-zsh
 
-use my customized cloud theme for [oh-my-zsh](http://ohmyz.sh/). assuming oh-my-zsh is installed:
+![modified cloud theme](screenshot.png)
+
+use my customized theme based on "cloud" for [oh-my-zsh](http://ohmyz.sh/). assuming oh-my-zsh is installed:
 
 ```sh
 $ ln -s ~/code/dotfiles/cloud-armno.zsh-theme ~/.oh-my-zsh/themes/cloud-armno.zsh-theme
@@ -70,4 +72,3 @@ $ ln -s ~/code/dotfiles/.functions ~/.functions
 $ ln -s ~/code/dotfiles/.agignore ~/.agignore
 ```
 
-![modified cloud theme](screenshot.png)
