@@ -39,7 +39,6 @@
 	editor = vim
 	autocrlf = false
 	filemode = false
-	pager = diff-highlight | less -r
 [advice]
 	statusHints = false
 [push]
