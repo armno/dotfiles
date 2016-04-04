@@ -40,6 +40,7 @@
 	editor = vim
 	autocrlf = false
 	filemode = false
+	untrackedCache = true
 [advice]
 	statusHints = false
 [push]
