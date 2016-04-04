@@ -1,6 +1,7 @@
 [user]
 	name = Armno
 	email = monkeyarmno@gmail.com
+	useconfigonly = true
 [merge]
 	ff = false
 [mergetool]
@@ -39,6 +40,7 @@
 	editor = vim
 	autocrlf = false
 	filemode = false
+	untrackedCache = true
 [advice]
 	statusHints = false
 [push]
