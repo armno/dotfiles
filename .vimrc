@@ -34,7 +34,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
                                          " ----- plugins to be installed via vundle -----
-Plugin 'kien/ctrlp.vim'                  " sublime-text-like Cmd+P - navigate through files
+Plugin 'ctrlpvim/ctrlp.vim'                  " sublime-text-like Cmd+P - navigate through files
 Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
 Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
 Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
@@ -56,6 +56,7 @@ Plugin 'leafgarland/typescript-vim'
 " Plugin 'ternjs/tern_for_vim'
 Plugin 'rking/ag.vim'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'tpope/vim-vinegar'
 
 call vundle#end()            " required
 

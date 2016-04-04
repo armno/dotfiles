@@ -8,9 +8,8 @@ alias .....="cd ../../../.."
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 alias l="ls -lha"
-alias ...="cd ../../.."
 alias please="sudo" # be nice
 alias fucking="please" # or be rude
 alias fuck='sudo $(history -p \!\!)'
-alias server="http-server ."
+alias server="http-server -s ."
 alias eh="sudo vim /etc/hosts"
