@@ -120,7 +120,8 @@ set timeout timeoutlen=1000 ttimeoutlen=100 " fix delay when type `O` (capital o
 " ----- key bindings -----
 let mapleader=","
 nnoremap ; :
-imap <leader>e <esc>
+" imap <leader>e <esc>
+imap jf <esc>
 nmap <leader>b :bn<CR>
 nmap <leader>B :bp<CR>
 nmap noh :nohl<CR>
