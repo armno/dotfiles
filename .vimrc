@@ -48,7 +48,8 @@ Plugin 'godlygeek/tabular'               " plugin for aligning text, required fo
 Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
 Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
-Plugin 'wookiehangover/jshint.vim'
+"Plugin 'wookiehangover/jshint.vim'
+Plugin 'Shutnik/jshint2.vim'
 Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
 Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'

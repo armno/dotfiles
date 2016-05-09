@@ -11,5 +11,5 @@ alias l="ls -lha"
 alias please="sudo" # be nice
 alias fucking="please" # or be rude
 alias fuck='sudo $(history -p \!\!)'
-alias server="http-server -s ."
+alias server="http-server -s -o"
 alias eh="sudo vim /etc/hosts"
