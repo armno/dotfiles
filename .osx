@@ -55,3 +55,6 @@ defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
 # disable version control for sketch
 defaults write -app 'sketch' ApplePersistence -bool no
+
+# show hidden files in finder
+defaults write com.apple.finder AppleShowAllFiles YES
