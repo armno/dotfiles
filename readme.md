@@ -58,8 +58,7 @@ adding new plugin / updating existing plugins, see [Vundle](https://github.com/g
 - `git diff` is using [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 
 ```sh
-$ npm install -g diff-so-fancy
-$ brew install gnu-sed
+$ brew install diff-so-fancy
 $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 ```
 
