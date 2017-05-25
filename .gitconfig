@@ -3,7 +3,7 @@
 	email = monkeyarmno@gmail.com
 	useconfigonly = true
 [merge]
-	ff = false
+	ff = true
 [mergetool]
 	keepBackup = true
 [color]

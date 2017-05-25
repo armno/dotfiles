@@ -54,7 +54,6 @@ adding new plugin / updating existing plugins, see [Vundle](https://github.com/g
 
 ### git
 
-- non fast-forward merge strategy is my default git config.
 - `git diff` is using [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 
 ```sh
@@ -66,6 +65,7 @@ $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 
 ```sh
 $ ln -s ~/code/dotfiles/.osx ~/.osx
+$ killall SystemUIServer
 ```
 
 ### aliases, functions
