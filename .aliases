@@ -13,3 +13,6 @@ alias fucking="please" # or be rude
 alias fuck='sudo $(history -p \!\!)'
 alias server="http-server -s -o"
 alias eh="sudo vim /etc/hosts"
+alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+alias canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias bew="brew update && brew upgrade && brew cleanup"

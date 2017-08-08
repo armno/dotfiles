@@ -16,6 +16,7 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 # defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
 # Disable auto-correct
@@ -49,9 +50,6 @@ defaults write com.apple.screencapture disable-shadow -bool true
 defaults write NSGlobalDomain NSUseLeopardWindowValues NO
 defaults write com.apple.Safari NSUseLeopardWindowValues YES
 
-# enable key repeat in non-terminal apps (mvim, sublime)
-defaults write -g ApplePressAndHoldEnabled -bool false
-defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
 # disable version control for sketch
 defaults write -app 'sketch' ApplePersistence -bool no

@@ -3,7 +3,7 @@
 	email = monkeyarmno@gmail.com
 	useconfigonly = true
 [merge]
-	ff = false
+	ff = true
 [mergetool]
 	keepBackup = true
 [color]
@@ -17,11 +17,12 @@
 	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
 	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
 	sup = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --author=armno
-	st = status -sb
-	fo = fetch origin
-	conflicts = diff --diff-filter=U
 	ldm = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --author=armno --no-merges --date=relative
+	st = status -sb
+	conflicts = diff --diff-filter=U
+	fo = fetch origin
 	mo = merge origin/master
+	co = checkout
 	diffm = diff --diff-filter=M
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 [color "status"]

@@ -2,6 +2,15 @@
 
 ## setting up
 
+switch to `zsh` from `bash`
+
+```sh
+$ brew install zsh zsh-completions
+$ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
+```
+
+(ref: https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/)
+
 ```sh
 $ cd ~/code
 $ git clone git@github.com:armno/dotfiles.git
@@ -45,12 +54,10 @@ adding new plugin / updating existing plugins, see [Vundle](https://github.com/g
 
 ### git
 
-- non fast-forward merge strategy is my default git config.
 - `git diff` is using [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 
 ```sh
-$ npm install -g diff-so-fancy
-$ brew install gnu-sed
+$ brew install diff-so-fancy
 $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 ```
 
@@ -58,6 +65,7 @@ $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 
 ```sh
 $ ln -s ~/code/dotfiles/.osx ~/.osx
+$ killall SystemUIServer
 ```
 
 ### aliases, functions

@@ -37,7 +37,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'ctrlpvim/ctrlp.vim'                  " sublime-text-like Cmd+P - navigate through files
 Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
 Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
-Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
+"Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
 Plugin 'mattn/emmet-vim'                 " emmet for vim
 Plugin 'ervandew/supertab'               " enable using <tab> for completion
 Plugin 'Lokaltog/vim-easymotion'         " make search better
