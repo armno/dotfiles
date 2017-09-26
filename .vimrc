@@ -198,7 +198,7 @@ let g:airline#extensions#tabline#left_sep = ' '     " use | instead of > for buf
 let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " vim-gitgutter
-let g:gitgutter_sign_column_always = 1              " always show sign column (gutter)
+set signcolumn=yes              " always show sign column (gutter)
 let g:gitgutter_max_signs = 5000
 
 " vim-markdown
