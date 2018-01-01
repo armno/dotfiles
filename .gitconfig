@@ -2,6 +2,7 @@
 	name = Armno
 	email = monkeyarmno@gmail.com
 	useconfigonly = true
+	signingkey = ABA38C0A9866BBEE
 [merge]
 	ff = true
 [mergetool]
@@ -53,3 +54,7 @@
 	show = diff-so-fancy | less --tabs=1,5 -RFX
 [fetch]
 	prune = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
