@@ -21,9 +21,5 @@ function start() {
 
 	# empty the readme.md
 	echo "# $name" > readme.md;
-
-	echo "\n";
-	echo "$fg[yellow]Creating package.json$reset_color";
-	npm init;
-
+	echo "done"
 }
