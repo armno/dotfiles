@@ -34,7 +34,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
                                          " ----- plugins to be installed via vundle -----
-Plugin 'ctrlpvim/ctrlp.vim'                  " sublime-text-like Cmd+P - navigate through files
+Plugin 'ctrlpvim/ctrlp.vim'              " sublime-text-like Cmd+P - navigate through files
 Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
 Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
 "Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
@@ -48,16 +48,14 @@ Plugin 'godlygeek/tabular'               " plugin for aligning text, required fo
 Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
 Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
-"Plugin 'wookiehangover/jshint.vim'
-Plugin 'Shutnik/jshint2.vim'
 Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
 Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
-" Plugin 'ternjs/tern_for_vim'
 Plugin 'rking/ag.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-vinegar'
+Plugin 'smallwat3r/vim-mono_sw'          " an alternative colorscheme to use in case base16 is broken
 
 call vundle#end()            " required
 
@@ -69,12 +67,12 @@ syntax on                       " enable syntax highlighting
 set background=dark             " use dark background to reduce tears level
 set t_Co=256                    " enable 256-color mode
 let base16colorspace=256
-colorscheme base16-ocean
+colorscheme mono_sw
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar
 set hlsearch                    " highlight search researchs
-set showbreak=↪                 " display this character for line break
+"set showbreak=↪                 " display this character for line break
 set linespace=3                 " spaces between lines
 set cursorline                  " highlight current line where the cursor is at
 set scrolloff=5                 " number of lines to keep from the edge when scrolling
@@ -82,7 +80,7 @@ if has('statusline')
   set laststatus=2              " always show status line
 endif
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set lcs=tab:⤑\ ,trail:·,eol:¬
+"set lcs=tab:⤑\ ,trail:·,eol:¬
 set nolist
 " ---- general settings ----
 set mouse=a                     " enable mouse support in console
