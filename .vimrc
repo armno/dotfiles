@@ -55,7 +55,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'rking/ag.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-vinegar'
-Plugin 'smallwat3r/vim-mono_sw'          " an alternative colorscheme to use in case base16 is broken
+" Plugin 'smallwat3r/vim-mono_sw'          " an alternative colorscheme to use in case base16 is broken
+Plugin 'abnt713/vim-hashpunk'
 
 call vundle#end()            " required
 
@@ -67,7 +68,8 @@ syntax on                       " enable syntax highlighting
 set background=dark             " use dark background to reduce tears level
 set t_Co=256                    " enable 256-color mode
 let base16colorspace=256
-colorscheme mono_sw
+" colorscheme mono_sw
+colorscheme hashpunk-sweet
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar
