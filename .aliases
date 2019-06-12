@@ -7,7 +7,7 @@ alias .....="cd ../../../.."
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
-alias l="ls -lha"
+alias l="ls -lhart"
 alias please="sudo" # be nice
 alias fucking="please" # or be rude
 alias fuck='sudo $(history -p \!\!)'
@@ -19,3 +19,5 @@ alias bew="brew update && brew upgrade && brew cleanup"
 alias sim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
 alias ping="prettyping"
 alias rmf="rm -rf"
+alias dark="base16_material-darker"
+alias light="base16_google-light"
