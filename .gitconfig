@@ -26,6 +26,7 @@
 	co = checkout
 	diffm = diff --diff-filter=M
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+	branches = branch -a
 [color "status"]
 	added = green
 	changed = yellow
