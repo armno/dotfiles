@@ -11,6 +11,8 @@ $ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 
 (ref: https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/)
 
+or just install `oh-my-zsh` and follow the instructions there.
+
 ```sh
 $ cd ~/code
 $ git clone git@github.com:armno/dotfiles.git
@@ -75,6 +77,13 @@ $ ln -s ~/code/dotfiles/.aliases ~/.aliases
 $ ln -s ~/code/dotfiles/.functions ~/.functions
 ```
 
+add in `~/.zshrc` file
+
+```
+source ~/.aliases
+source ~/.functions
+```
+
 ### ag
 
 `ag`'s ignored patterns. normally `ag` ignores patterns in `.gitignore` file but still, there are some files in the repo that shouldn't show up in `CtrlP`.
@@ -83,3 +92,8 @@ $ ln -s ~/code/dotfiles/.functions ~/.functions
 $ ln -s ~/code/dotfiles/.agignore ~/.agignore
 ```
 
+### Remove 'Last Login' message
+
+```sh
+$ touch ~/.hushlogin
+```

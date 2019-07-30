@@ -2,7 +2,7 @@
 	name = Armno
 	email = monkeyarmno@gmail.com
 	useconfigonly = true
-	signingkey = ABA38C0A9866BBEE
+	signingkey = 255BF67E8EA24CE2
 [merge]
 	ff = true
 [mergetool]
