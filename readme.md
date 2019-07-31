@@ -65,6 +65,13 @@ $ defaults delete -g ApplePressAndHoldEnabled
 
 go to **System Preferences > Keyboard**. Set Key Repeat to be `fastest` and Delay Until Report to be `shortest`.
 
+don't forget to add 'markdown' in the config after installed Prettier: 
+```json
+"prettier.disabledLanguages": [
+  "markdown"
+]
+```
+
 ### git
 
 - `git diff` is using [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
