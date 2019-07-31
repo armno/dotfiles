@@ -54,6 +54,17 @@ $ vim +PluginInstall +qall
 
 adding new plugin / updating existing plugins, see [Vundle](https://github.com/gmarik/Vundle.vim)
 
+### vscode
+
+enable key-repeat for vscode insiders (with vim extenstion)
+
+```sh
+$ defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+$ defaults delete -g ApplePressAndHoldEnabled
+```
+
+go to **System Preferences > Keyboard**. Set Key Repeat to be `fastest` and Delay Until Report to be `shortest`.
+
 ### git
 
 - `git diff` is using [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
@@ -64,6 +75,8 @@ $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
 ```
 
 ### osx
+
+(this doesn't do anything i think. it just creates a symlink without actually run the commands inside.)
 
 ```sh
 $ ln -s ~/code/dotfiles/.osx ~/.osx
@@ -96,4 +109,22 @@ $ ln -s ~/code/dotfiles/.agignore ~/.agignore
 
 ```sh
 $ touch ~/.hushlogin
+```
+
+### z
+
+1. Clone [z](https://github.com/rupa/z) to `/Users/armno/code/z`.
+2. Add z at the top of `~/.zshrc` file.
+
+```bash
+. /Users/armno/code/z/z.sh
+# ...
+```
+
+### bat
+
+[`bat`](https://github.com/sharkdp/bat) another kind of `cat`.
+
+```sh
+$ brew install bat
 ```

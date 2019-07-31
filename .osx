@@ -1,4 +1,6 @@
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
+# some of these might not work anymore
+#
+# defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
 # Disable opening and closing window animations
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
