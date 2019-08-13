@@ -20,3 +20,4 @@ alias sim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulato
 alias rmf="rm -rf"
 alias dark="base16_material-darker"
 alias light="base16_google-light"
+alias preview="fzf --preview 'bat --color \"always\" {}'"

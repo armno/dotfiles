@@ -135,3 +135,11 @@ $ touch ~/.hushlogin
 ```sh
 $ brew install bat
 ```
+
+### fzf
+
+shamelessly stole `preview` alias from Remy Sharp's ["CLI: Improved"](https://remysharp.com/2018/08/23/cli-improved) post.
+
+```sh
+$ brew install fzf
+```
