@@ -57,6 +57,7 @@ Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-vinegar'
 " Plugin 'smallwat3r/vim-mono_sw'          " an alternative colorscheme to use in case base16 is broken
 Plugin 'abnt713/vim-hashpunk'
+Plugin 'vim-airline/vim-airline'
 
 call vundle#end()            " required
 
