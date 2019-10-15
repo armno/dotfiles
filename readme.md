@@ -78,7 +78,13 @@ don't forget to add 'markdown' in the config after installed Prettier:
 
 ```sh
 $ brew install diff-so-fancy
+```
+
+- create symlinks for global config file and commit template
+
+```sh
 $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
+$ ln -s ~/code/dotfiles/.gitmessage ~/.gitmessage
 ```
 
 ### osx

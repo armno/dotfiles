@@ -9,7 +9,6 @@ alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 alias l="ls -lhart"
 alias please="sudo" # be nice
-alias fucking="please" # or be rude
 alias fuck='sudo $(history -p \!\!)'
 alias server="npx http-server -s -o"
 alias eh="sudo vim /etc/hosts"
@@ -21,4 +20,6 @@ alias rmf="rm -rf"
 alias dark="base16_material-darker"
 alias light="base16_google-light"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias curl="echo 'do you mean http?'"
+alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color="always" {+2} | diff-so-fancy' \
+--bind=ctrl-j:preview-down --bind=ctrl-k:preview-up \
+--preview-window=right:70%:wrap"
