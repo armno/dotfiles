@@ -23,3 +23,8 @@ function start() {
 	echo "# $name" > readme.md;
 	echo "done"
 }
+
+function peg() {
+	filename=$(ls -1t $HOME/Desktop/Screen* | head -n 1)
+	sips --oneLine --setProperty format jpeg "$filename" --out "$HOME/Desktop/screenshot.jpg"
+}
