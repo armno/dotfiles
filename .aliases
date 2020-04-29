@@ -25,3 +25,4 @@ alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color="a
 --preview-window=right:70%:wrap"
 alias blog="z blog && hugo server --buildDrafts --noHTTPCache"
 alias sm="source-map-explorer"
+alias dc="docker-compose"
