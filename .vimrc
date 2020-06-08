@@ -55,12 +55,10 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'rking/ag.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-vinegar'
-" Plugin 'smallwat3r/vim-mono_sw'          " an alternative colorscheme to use in case base16 is broken
-Plugin 'abnt713/vim-hashpunk'
 "Plugin 'vim-airline/vim-airline'
-Plugin 'NLKNguyen/papercolor-theme'
 "Plugin 'vim-airline/vim-airline-themes'
 Plugin 'itchyny/lightline.vim'
+Plugin 'mhartington/oceanic-next'
 
 call vundle#end()            " required
 
@@ -70,9 +68,13 @@ filetype plugin on
 " ----- look and feel ----- "
 syntax on                       " enable syntax highlighting
 set background=light
-set t_Co=256                    " enable 256-color mode
+" set t_Co=256                    " enable 256-color mode
+if (has("termguicolors"))
+ 	set termguicolors
+endif
+
 let base16colorspace=256
-colorscheme PaperColor
+colorscheme OceanicNext
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar

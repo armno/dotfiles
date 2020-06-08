@@ -59,3 +59,5 @@
 	template = ~/.gitmessage
 [gpg]
 	program = gpg
+[pull]
+	ff = only
