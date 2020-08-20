@@ -59,6 +59,7 @@ Plugin 'tpope/vim-vinegar'
 "Plugin 'vim-airline/vim-airline-themes'
 Plugin 'itchyny/lightline.vim'
 Plugin 'mhartington/oceanic-next'
+Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()            " required
 
@@ -74,7 +75,8 @@ if (has("termguicolors"))
 endif
 
 let base16colorspace=256
-colorscheme OceanicNext
+let ayucolor="dark"
+colorscheme ayu
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar
