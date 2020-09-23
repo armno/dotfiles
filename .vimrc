@@ -34,9 +34,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
                                          " ----- plugins to be installed via vundle -----
-Plugin 'ctrlpvim/ctrlp.vim'                  " sublime-text-like Cmd+P - navigate through files
+Plugin 'ctrlpvim/ctrlp.vim'              " sublime-text-like Cmd+P - navigate through files
 Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
-Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
+"Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
 "Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
 Plugin 'mattn/emmet-vim'                 " emmet for vim
 Plugin 'ervandew/supertab'               " enable using <tab> for completion
@@ -48,16 +48,18 @@ Plugin 'godlygeek/tabular'               " plugin for aligning text, required fo
 Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
 Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
-"Plugin 'wookiehangover/jshint.vim'
-Plugin 'Shutnik/jshint2.vim'
 Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
 Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
-" Plugin 'ternjs/tern_for_vim'
 Plugin 'rking/ag.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-vinegar'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+Plugin 'itchyny/lightline.vim'
+Plugin 'mhartington/oceanic-next'
+Plugin 'ayu-theme/ayu-vim'
 
 call vundle#end()            " required
 
@@ -66,23 +68,29 @@ filetype plugin on
 
 " ----- look and feel ----- "
 syntax on                       " enable syntax highlighting
-set background=dark             " use dark background to reduce tears level
-set t_Co=256                    " enable 256-color mode
+set background=light
+" set t_Co=256                    " enable 256-color mode
+if (has("termguicolors"))
+ 	set termguicolors
+endif
+
 let base16colorspace=256
-colorscheme base16-ocean
+let ayucolor="dark"
+colorscheme ayu
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar
 set hlsearch                    " highlight search researchs
-set showbreak=↪                 " display this character for line break
+"set showbreak=↪                 " display this character for line break
 set linespace=3                 " spaces between lines
 set cursorline                  " highlight current line where the cursor is at
 set scrolloff=5                 " number of lines to keep from the edge when scrolling
+set noshowmode                  " disable displaying modes at the very bottom of the screen
 if has('statusline')
   set laststatus=2              " always show status line
 endif
 " set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set lcs=tab:⤑\ ,trail:·,eol:¬
+"set lcs=tab:⤑\ ,trail:·,eol:¬
 set nolist
 " ---- general settings ----
 set mouse=a                     " enable mouse support in console
@@ -193,9 +201,13 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <C-F> :Ag<SPACE>
 
 " vim-airline
-let g:airline_powerline_fonts = 1                   " use powerline-patched fonts
-let g:airline#extensions#tabline#left_sep = ' '     " use | instead of > for bufferline
-let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline_powerline_fonts = 1                   " use powerline-patched fonts
+"let g:airline#extensions#tabline#left_sep = ' '     " use | instead of > for bufferline
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline_theme='papercolor'
+
+" vim-lightline
+let g:lightline = { 'colorscheme': 'PaperColor' }
 
 " vim-gitgutter
 set signcolumn=yes              " always show sign column (gutter)

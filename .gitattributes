@@ -4,3 +4,5 @@
 *.map binary
 *.min.js binary
 *.min.css binary
+dist/**/* binary
+package-lock.json binary

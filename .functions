@@ -21,9 +21,14 @@ function start() {
 
 	# empty the readme.md
 	echo "# $name" > readme.md;
+	echo "done"
+}
 
-	echo "\n";
-	echo "$fg[yellow]Creating package.json$reset_color";
-	npm init;
+function peg() {
+	filename=$(ls -1t $HOME/Desktop/Screen* | head -n 1)
+	sips --oneLine --setProperty format jpeg "$filename" --out "$HOME/Desktop/screenshot.jpg"
+}
 
+h() {
+  print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac --height "50%" | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
 }

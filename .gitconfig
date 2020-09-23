@@ -2,7 +2,7 @@
 	name = Armno
 	email = monkeyarmno@gmail.com
 	useconfigonly = true
-	signingkey = ABA38C0A9866BBEE
+	signingkey = D53BFB30C401BD32
 [merge]
 	ff = true
 [mergetool]
@@ -14,7 +14,6 @@
 	pom = push origin master
   undo = reset HEAD~1
 	ls = log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate
-	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
 	ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
 	sup = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative --author=armno
@@ -26,6 +25,7 @@
 	co = checkout
 	diffm = diff --diff-filter=M
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
+	branches = branch -a
 [color "status"]
 	added = green
 	changed = yellow
@@ -54,7 +54,10 @@
 	show = diff-so-fancy | less --tabs=1,5 -RFX
 [fetch]
 	prune = true
-[commit]
-	gpgsign = true
+#[commit]
+#	gpgsign = true
+#	template = ~/.gitmessage
 [gpg]
 	program = gpg
+[pull]
+	ff = only

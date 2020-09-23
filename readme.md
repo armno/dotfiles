@@ -11,6 +11,8 @@ $ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
 
 (ref: https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/)
 
+or just install `oh-my-zsh` and follow the instructions there.
+
 ```sh
 $ cd ~/code
 $ git clone git@github.com:armno/dotfiles.git
@@ -52,16 +54,42 @@ $ vim +PluginInstall +qall
 
 adding new plugin / updating existing plugins, see [Vundle](https://github.com/gmarik/Vundle.vim)
 
+### vscode
+
+enable key-repeat for vscode insiders (with vim extenstion)
+
+```sh
+$ defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+$ defaults delete -g ApplePressAndHoldEnabled
+```
+
+go to **System Preferences > Keyboard**. Set Key Repeat to be `fastest` and Delay Until Report to be `shortest`.
+
+don't forget to add 'markdown' in the config after installed Prettier: 
+```json
+"prettier.disabledLanguages": [
+  "markdown"
+]
+```
+
 ### git
 
 - `git diff` is using [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
 
 ```sh
 $ brew install diff-so-fancy
+```
+
+- create symlinks for global config file and commit template
+
+```sh
 $ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
+$ ln -s ~/code/dotfiles/.gitmessage ~/.gitmessage
 ```
 
 ### osx
+
+(this doesn't do anything i think. it just creates a symlink without actually run the commands inside.)
 
 ```sh
 $ ln -s ~/code/dotfiles/.osx ~/.osx
@@ -75,6 +103,13 @@ $ ln -s ~/code/dotfiles/.aliases ~/.aliases
 $ ln -s ~/code/dotfiles/.functions ~/.functions
 ```
 
+add in `~/.zshrc` file
+
+```
+source ~/.aliases
+source ~/.functions
+```
+
 ### ag
 
 `ag`'s ignored patterns. normally `ag` ignores patterns in `.gitignore` file but still, there are some files in the repo that shouldn't show up in `CtrlP`.
@@ -83,3 +118,34 @@ $ ln -s ~/code/dotfiles/.functions ~/.functions
 $ ln -s ~/code/dotfiles/.agignore ~/.agignore
 ```
 
+### Remove 'Last Login' message
+
+```sh
+$ touch ~/.hushlogin
+```
+
+### z
+
+1. Clone [z](https://github.com/rupa/z) to `/Users/armno/code/z`.
+2. Add z at the top of `~/.zshrc` file.
+
+```bash
+. /Users/armno/code/z/z.sh
+# ...
+```
+
+### bat
+
+[`bat`](https://github.com/sharkdp/bat) another kind of `cat`.
+
+```sh
+$ brew install bat
+```
+
+### fzf
+
+shamelessly stole `preview` alias from Remy Sharp's ["CLI: Improved"](https://remysharp.com/2018/08/23/cli-improved) post.
+
+```sh
+$ brew install fzf
+```
