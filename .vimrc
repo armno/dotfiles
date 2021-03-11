@@ -48,8 +48,8 @@ Plugin 'godlygeek/tabular'               " plugin for aligning text, required fo
 Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
 Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
-Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
-Plugin 'xsbeats/vim-blade'
+"Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
+"Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'rking/ag.vim'
@@ -58,8 +58,9 @@ Plugin 'tpope/vim-vinegar'
 "Plugin 'vim-airline/vim-airline'
 "Plugin 'vim-airline/vim-airline-themes'
 Plugin 'itchyny/lightline.vim'
-Plugin 'mhartington/oceanic-next'
+"Plugin 'mhartington/oceanic-next'
 Plugin 'ayu-theme/ayu-vim'
+Plugin 'prettier/vim-prettier'
 
 call vundle#end()            " required
 
@@ -231,3 +232,6 @@ let JSHintUpdateWriteOnly=1
 
 " netrw directory style
 let g:netrw_liststyle=3
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync

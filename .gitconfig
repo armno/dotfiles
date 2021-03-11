@@ -45,13 +45,25 @@
 	autocrlf = false
 	filemode = false
 	untrackedCache = true
+	pager = delta
 [advice]
 	statusHints = false
 [push]
 	default = simple
-[pager]
-	diff = diff-so-fancy | less --tabs=1,5 -RFX
-	show = diff-so-fancy | less --tabs=1,5 -RFX
+# [pager]
+#	diff = diff-so-fancy | less --tabs=1,5 -RFX
+#	show = diff-so-fancy | less --tabs=1,5 -RFX
+[delta]
+	#plus-color = "#012800"
+	#minus-color = "#340001"
+	syntax-theme = Dracula
+	features = line-numbers decorations
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+[interactive]
+	diffFilter = delta --color-only
 [fetch]
 	prune = true
 [commit]
@@ -61,3 +73,5 @@
 	program = gpg
 [pull]
 	ff = only
+[diff]
+	colorMoved = default

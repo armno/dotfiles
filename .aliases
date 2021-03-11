@@ -7,20 +7,26 @@ alias .....="cd ../../../.."
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
-alias l="ls -lhart"
+alias ls="exa"
+alias ll="exa --long --header --classify --git"
+alias tree="exa --tree"
 alias please="sudo" # be nice
 alias fuck='sudo $(history -p \!\!)'
 alias server="http-server -s -o"
 alias eh="sudo vim /etc/hosts"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+# alias canary="/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary"
+alias canary="open -n -a /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --user-data-dir=\"/tmp/chrome_dev_test\" --disable-web-security --disable-translate --disable-crash-reporter --disable-breakpad --disable-reporting"
 alias bew="brew update && brew upgrade && brew cleanup"
 alias sim="open -a simulator"
 alias rmf="rm -rf"
 alias dark="base16_material-darker"
-alias light="base16_google-light"
+alias light="base16_cupertino"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color="always" {+2} | diff-so-fancy' \
+--bind=ctrl-j:preview-down --bind=ctrl-k:preview-up \
+--preview-window=right:70%:wrap"
+alias gds="git status -s | fzf --no-sort --reverse --preview 'git diff --staged --color="always" {+2} | diff-so-fancy' \
 --bind=ctrl-j:preview-down --bind=ctrl-k:preview-up \
 --preview-window=right:70%:wrap"
 alias blog="z blog && hugo server --buildDrafts --noHTTPCache"
