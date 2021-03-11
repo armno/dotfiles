@@ -66,9 +66,9 @@
 	diffFilter = delta --color-only
 [fetch]
 	prune = true
-[commit]
-	gpgsign = true
-	template = ~/.gitmessage
+#[commit]
+#	gpgsign = true
+#	template = ~/.gitmessage
 [gpg]
 	program = gpg
 [pull]
