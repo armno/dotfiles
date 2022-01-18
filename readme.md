@@ -74,10 +74,10 @@ don't forget to add 'markdown' in the config after installed Prettier:
 
 ### git
 
-- `git diff` is using [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
+- `git diff` is using [delta](https://dandavison.github.io/delta/)
 
 ```sh
-$ brew install diff-so-fancy
+$ brew install git-delta
 ```
 
 - create symlinks for global config file and commit template
