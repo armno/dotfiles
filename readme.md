@@ -2,29 +2,16 @@
 
 ## setting up
 
-switch to `zsh` from `bash`
-
-```sh
-$ brew install zsh zsh-completions
-$ sudo dscl . -create /Users/$USER UserShell /usr/local/bin/zsh
-```
-
-(ref: https://rick.cogley.info/post/use-homebrew-zsh-instead-of-the-osx-default/)
-
-or just install `oh-my-zsh` and follow the instructions there.
+clone this repo
 
 ```sh
 $ cd ~/code
 $ git clone git@github.com:armno/dotfiles.git
 ```
 
-### base16-shell
-
-install it [here](https://github.com/chriskempson/base16-shell)
-
 ### oh-my-zsh
 
-![modified cloud theme](screenshot.png)
+switch to `zsh` from `bash`: install `oh-my-zsh` and follow the instructions there.
 
 use my customized theme based on "cloud" for [oh-my-zsh](http://ohmyz.sh/). assuming oh-my-zsh is installed:
 
@@ -33,6 +20,10 @@ $ ln -s ~/code/dotfiles/cloud-armno.zsh-theme ~/.oh-my-zsh/themes/cloud-armno.zs
 ```
 
 then change `ZSH_THEME` option in `~/.zshrc` file to `cloud-armno`
+
+### base16-shell
+
+install it [here](https://github.com/chriskempson/base16-shell)
 
 ### vim
 
@@ -124,15 +115,9 @@ $ ln -s ~/code/dotfiles/.agignore ~/.agignore
 $ touch ~/.hushlogin
 ```
 
-### z
+### zoxide
 
-1. Clone [z](https://github.com/rupa/z) to `/Users/armno/code/z`.
-2. Add z at the top of `~/.zshrc` file.
-
-```bash
-. /Users/armno/code/z/z.sh
-# ...
-```
+install [`zoxide`](https://github.com/ajeetdsouza/zoxide)
 
 ### bat
 
