@@ -133,6 +133,14 @@ shamelessly stole `preview` alias from Remy Sharp's ["CLI: Improved"](https://re
 brew install fzf
 ```
 
+### exa
+
+use `exa` instead of `ls`
+
+```sh
+brew install exa
+```
+
 ### keyboard
 
 enable key repeats
