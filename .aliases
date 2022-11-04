@@ -7,6 +7,7 @@ alias .....="cd ../../../.."
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
+alias rm="trash"
 alias ls="exa"
 alias ll="exa --long --header --classify --git"
 alias tree="exa --tree"
@@ -19,9 +20,8 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias canary="open -n -a /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --user-data-dir=\"/tmp/chrome_dev_test\" --disable-web-security --disable-translate --disable-crash-reporter --disable-breakpad --disable-reporting"
 alias bew="brew update && brew upgrade && brew cleanup"
 alias sim="open -a simulator"
-alias rmf="rm -rf"
-alias dark="base16_material-darker"
-alias light="base16_cupertino"
+alias dark="base16_material-darker && git config --global delta.syntax-theme zenburn"
+alias light="base16_cupertino && git config --global delta.syntax-theme GitHub"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color="always" {+2} | diff-so-fancy' \
 --bind=ctrl-j:preview-down --bind=ctrl-k:preview-up \
@@ -32,3 +32,5 @@ alias gds="git status -s | fzf --no-sort --reverse --preview 'git diff --staged 
 alias blog="z blog && hugo server --buildDrafts --noHTTPCache"
 alias sm="source-map-explorer"
 alias dc="docker-compose"
+alias wb="webpack-bundle-analyzer"
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'

@@ -11,7 +11,7 @@
 	ui = true
 [alias]
 	poh = push origin HEAD
-	pom = push origin master
+	pom = push origin main
   undo = reset HEAD~1
 	ls = log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate
 	lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
@@ -24,22 +24,19 @@
 	mo = merge origin/master
 	co = checkout
 	diffm = diff --diff-filter=M
+	df = diff --staged
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 	branches = branch -a
+	diffp = diff ':!package-lock.json'
 [color "status"]
 	added = green
 	changed = yellow
 	untracked = red
-[color "diff"]
-	meta = blue bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-[color "diff-highlight"]
-	oldNormal = "red bold"
-	oldHighlight = "red bold 52"
-	newNormal = "green bold"
-	newHighlight = "green bold 22"
+#[color "diff"]
+#	meta = blue bold
+#	frag = magenta bold
+#	old = red bold
+#	new = green bold
 [core]
 	editor = vim
 	autocrlf = false
@@ -48,6 +45,7 @@
 	pager = delta
 [advice]
 	statusHints = false
+	ignoredHook = false
 [push]
 	default = simple
 # [pager]
@@ -55,11 +53,12 @@
 #	show = diff-so-fancy | less --tabs=1,5 -RFX
 [delta]
 	#plus-color = "#012800"
-	#minus-color = "#340001"
-	syntax-theme = Dracula
-	features = line-numbers decorations
+	#minus-style = brightred
+	syntax-theme = zenburn
+	features = decorations line-numbers
+	side-by-side = false
 [delta "decorations"]
-	commit-decoration-style = bold yellow box ul
+	commit-decoration-style = bold yellow box
 	file-style = bold yellow ul
 	file-decoration-style = none
 [interactive]
@@ -75,3 +74,5 @@
 	ff = only
 [diff]
 	colorMoved = default
+[init]
+	defaultBranch = main
