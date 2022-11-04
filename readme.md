@@ -47,14 +47,12 @@ adding new plugin / updating existing plugins, see [Vundle](https://github.com/g
 
 ### vscode
 
-enable key-repeat for vscode insiders (with vim extenstion)
+enable key-repeat for vscode (with vim extenstion)
 
 ```sh
-defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults delete -g ApplePressAndHoldEnabled
 ```
-
-go to **System Preferences > Keyboard**. Set Key Repeat to be `fastest` and Delay Until Report to be `shortest`.
 
 don't forget to add 'markdown' in the config after installed Prettier: 
 ```json
@@ -137,9 +135,17 @@ brew install fzf
 
 ### keyboard
 
+enable key repeats
+
+```sh
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
 make keyboard key repeats faster
 
 ```sh
 defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
 defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
 ```
+
+go to **System Preferences > Keyboard**. Set Key Repeat to be `fastest` and Delay Until Report to be `shortest`.
