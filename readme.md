@@ -5,8 +5,8 @@
 clone this repo
 
 ```sh
-$ cd ~/code
-$ git clone git@github.com:armno/dotfiles.git
+cd ~/code
+git clone git@github.com:armno/dotfiles.git
 ```
 
 ### oh-my-zsh
@@ -16,7 +16,7 @@ switch to `zsh` from `bash`: install `oh-my-zsh` and follow the instructions the
 use my customized theme based on "cloud" for [oh-my-zsh](http://ohmyz.sh/). assuming oh-my-zsh is installed:
 
 ```sh
-$ ln -s ~/code/dotfiles/cloud-armno.zsh-theme ~/.oh-my-zsh/themes/cloud-armno.zsh-theme
+ln -s ~/code/dotfiles/cloud-armno.zsh-theme ~/.oh-my-zsh/themes/cloud-armno.zsh-theme
 ```
 
 then change `ZSH_THEME` option in `~/.zshrc` file to `cloud-armno`
@@ -31,30 +31,28 @@ my vim setup requires [ag](https://github.com/ggreer/the_silver_searcher)
 and [editorconfig](http://editorconfig.org), which can be installed by
 
 ```sh
-$ brew install the_silver_searcher editorconfig
+brew install the_silver_searcher editorconfig
 ```
 
 then set up vim and vundle.
 
 ```sh
-$ ln -s ~/code/dotfiles/.vim ~/.vim
-$ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-$ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
-$ vim +PluginInstall +qall
+ln -s ~/code/dotfiles/.vim ~/.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+ln -s ~/code/dotfiles/.vimrc ~/.vimrc
+vim +PluginInstall +qall
 ```
 
 adding new plugin / updating existing plugins, see [Vundle](https://github.com/gmarik/Vundle.vim)
 
 ### vscode
 
-enable key-repeat for vscode insiders (with vim extenstion)
+enable key-repeat for vscode (with vim extenstion)
 
 ```sh
-$ defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false
-$ defaults delete -g ApplePressAndHoldEnabled
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults delete -g ApplePressAndHoldEnabled
 ```
-
-go to **System Preferences > Keyboard**. Set Key Repeat to be `fastest` and Delay Until Report to be `shortest`.
 
 don't forget to add 'markdown' in the config after installed Prettier: 
 ```json
@@ -68,14 +66,14 @@ don't forget to add 'markdown' in the config after installed Prettier:
 - `git diff` is using [delta](https://dandavison.github.io/delta/)
 
 ```sh
-$ brew install git-delta
+brew install git-delta
 ```
 
 - create symlinks for global config file and commit template
 
 ```sh
-$ ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
-$ ln -s ~/code/dotfiles/.gitmessage ~/.gitmessage
+ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
+ln -s ~/code/dotfiles/.gitmessage ~/.gitmessage
 ```
 
 ### osx
@@ -83,15 +81,15 @@ $ ln -s ~/code/dotfiles/.gitmessage ~/.gitmessage
 (this doesn't do anything i think. it just creates a symlink without actually run the commands inside.)
 
 ```sh
-$ ln -s ~/code/dotfiles/.osx ~/.osx
-$ killall SystemUIServer
+ln -s ~/code/dotfiles/.osx ~/.osx
+killall SystemUIServer
 ```
 
 ### aliases, functions
 
 ```sh
-$ ln -s ~/code/dotfiles/.aliases ~/.aliases
-$ ln -s ~/code/dotfiles/.functions ~/.functions
+ln -s ~/code/dotfiles/.aliases ~/.aliases
+ln -s ~/code/dotfiles/.functions ~/.functions
 ```
 
 add in `~/.zshrc` file
@@ -106,13 +104,13 @@ source ~/.functions
 `ag`'s ignored patterns. normally `ag` ignores patterns in `.gitignore` file but still, there are some files in the repo that shouldn't show up in `CtrlP`.
 
 ```sh
-$ ln -s ~/code/dotfiles/.agignore ~/.agignore
+ln -s ~/code/dotfiles/.agignore ~/.agignore
 ```
 
 ### Remove 'Last Login' message
 
 ```sh
-$ touch ~/.hushlogin
+touch ~/.hushlogin
 ```
 
 ### zoxide
@@ -124,7 +122,7 @@ install [`zoxide`](https://github.com/ajeetdsouza/zoxide)
 [`bat`](https://github.com/sharkdp/bat) another kind of `cat`.
 
 ```sh
-$ brew install bat
+brew install bat
 ```
 
 ### fzf
@@ -132,5 +130,30 @@ $ brew install bat
 shamelessly stole `preview` alias from Remy Sharp's ["CLI: Improved"](https://remysharp.com/2018/08/23/cli-improved) post.
 
 ```sh
-$ brew install fzf
+brew install fzf
 ```
+
+### exa
+
+use `exa` instead of `ls`
+
+```sh
+brew install exa
+```
+
+### keyboard
+
+enable key repeats
+
+```sh
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+make keyboard key repeats faster
+
+```sh
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+```
+
+go to **System Preferences > Keyboard**. Set Key Repeat to be `fastest` and Delay Until Report to be `shortest`.
