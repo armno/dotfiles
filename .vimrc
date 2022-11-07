@@ -55,11 +55,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'rking/ag.vim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'tpope/vim-vinegar'
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
 Plugin 'itchyny/lightline.vim'
-"Plugin 'mhartington/oceanic-next'
-Plugin 'ayu-theme/ayu-vim'
 Plugin 'prettier/vim-prettier'
 
 call vundle#end()            " required
@@ -76,21 +72,20 @@ if (has("termguicolors"))
 endif
 
 let base16colorspace=256
-let ayucolor="dark"
-colorscheme ayu
+"colorscheme ayu
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar
 set hlsearch                    " highlight search researchs
 "set showbreak=↪                 " display this character for line break
 set linespace=3                 " spaces between lines
-set cursorline                  " highlight current line where the cursor is at
+"set cursorline                  " highlight current line where the cursor is at
 set scrolloff=5                 " number of lines to keep from the edge when scrolling
 set noshowmode                  " disable displaying modes at the very bottom of the screen
 if has('statusline')
   set laststatus=2              " always show status line
 endif
-" set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 "set lcs=tab:⤑\ ,trail:·,eol:¬
 set nolist
 " ---- general settings ----
@@ -202,13 +197,13 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <C-F> :Ag<SPACE>
 
 " vim-airline
-"let g:airline_powerline_fonts = 1                   " use powerline-patched fonts
-"let g:airline#extensions#tabline#left_sep = ' '     " use | instead of > for bufferline
-"let g:airline#extensions#tabline#left_alt_sep = '|'
-"let g:airline_theme='papercolor'
+" let g:airline_powerline_fonts = 1                   " use powerline-patched fonts
+" let g:airline#extensions#tabline#left_sep = ' '     " use | instead of > for bufferline
+" let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline_theme='papercolor'
 
 " vim-lightline
-let g:lightline = { 'colorscheme': 'PaperColor' }
+let g:lightline = { 'colorscheme': 'one' }
 
 " vim-gitgutter
 set signcolumn=yes              " always show sign column (gutter)
@@ -225,10 +220,6 @@ set synmaxcol=200
 " vim-jsx
 " enable jsx syntax highlighting for non-jsx extensions
 let g:jsx_ext_required = 0
-
-" vim-jshint
-" hint only on save
-let JSHintUpdateWriteOnly=1
 
 " netrw directory style
 let g:netrw_liststyle=3
