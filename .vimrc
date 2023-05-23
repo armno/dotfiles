@@ -65,7 +65,7 @@ filetype plugin on
 
 " ----- look and feel ----- "
 syntax on                       " enable syntax highlighting
-set background=light
+set background=dark
 " set t_Co=256                    " enable 256-color mode
 if (has("termguicolors"))
  	set termguicolors

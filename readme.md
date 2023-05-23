@@ -25,6 +25,16 @@ then change `ZSH_THEME` option in `~/.zshrc` file to `cloud-armno`
 
 install it [here](https://github.com/chriskempson/base16-shell)
 
+### kitty
+
+install kitty from [https://sw.kovidgoyal.net/kitty/binary/](https://sw.kovidgoyal.net/kitty/binary/)
+
+then symlink kitty's config file.
+
+```sh
+ln -s ~/code/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
+```
+
 ### vim
 
 my vim setup requires [ag](https://github.com/ggreer/the_silver_searcher)
