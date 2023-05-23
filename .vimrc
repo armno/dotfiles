@@ -48,7 +48,7 @@ Plugin 'godlygeek/tabular'               " plugin for aligning text, required fo
 Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
 Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
 Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
-"Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
+Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
 "Plugin 'xsbeats/vim-blade'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
@@ -72,7 +72,7 @@ if (has("termguicolors"))
 endif
 
 let base16colorspace=256
-"colorscheme ayu
+colorscheme base16-material-darker
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar
