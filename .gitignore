@@ -14,5 +14,6 @@ Thumbs.db
 .Trashes
 
 .vim/.netrwhist
-# vim bundles
 .vim/bundle/**
+.vim/autoload/plug.vim
+.vim/plugged/**

@@ -1,67 +1,36 @@
 " ---- Armno's .vimrc ----
 " collection (and probably stolen ones) of vim configuration
 "
-" required:
-" 	- vundle: for managing plugins
-" 	- the silver searcher: (way) faster search (used with CtrlP)
-"
-" 		use `brew` to install silver searcher
-"
-" 		```sh
-" 		$ brew install the_silver_searcher
-" 		```
-"
-" 		then install vundle
-"
-" 		```sh
-" 		$ cd dotfiles
-" 		$ git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
-" 		```
-"
-
 let g:python_host_prog = '/usr/local/bin/python'
 set shell=/bin/zsh
 " meh
 set nocompatible
 
-" vundle-required config
-filetype off
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
+call plug#begin()
 
                                          " ----- plugins to be installed via vundle -----
-Plugin 'ctrlpvim/ctrlp.vim'              " sublime-text-like Cmd+P - navigate through files
-Plugin 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
-"Plugin 'Raimondi/delimitMate'            " automatically close quotes, brackets
-"Plugin 'editorconfig/editorconfig-vim'   " enable .editorconfig support automatically
-Plugin 'mattn/emmet-vim'                 " emmet for vim
-Plugin 'ervandew/supertab'               " enable using <tab> for completion
-Plugin 'Lokaltog/vim-easymotion'         " make search better
-Plugin 'tpope/vim-surround'              " easily manipulate surrounding tags/characters
-Plugin 'bronson/vim-trailing-whitespace' " highlight whitespace in red
-Plugin 'airblade/vim-gitgutter'          " display git status in vim's gutter
-Plugin 'godlygeek/tabular'               " plugin for aligning text, required for vim-markdown
-Plugin 'plasticboy/vim-markdown'         " enable mardown syntax support
-Plugin 'vim-scripts/matchit.zip'         " make % highlights mating tags
-Plugin 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
-Plugin 'chriskempson/base16-vim'         " base16 colorscheme for vim
-"Plugin 'xsbeats/vim-blade'
-Plugin 'mxw/vim-jsx'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'rking/ag.vim'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'tpope/vim-vinegar'
-Plugin 'itchyny/lightline.vim'
-Plugin 'prettier/vim-prettier'
+Plug 'ctrlpvim/ctrlp.vim'              " sublime-text-like Cmd+P - navigate through files
+Plug 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
+Plug 'mattn/emmet-vim'                 " emmet for vim
+Plug 'ervandew/supertab'               " enable using <tab> for completion
+Plug 'Lokaltog/vim-easymotion'         " make search better
+Plug 'tpope/vim-surround'              " easily manipulate surrounding tags/characters
+Plug 'bronson/vim-trailing-whitespace' " highlight whitespace in red
+Plug 'airblade/vim-gitgutter'          " display git status in vim's gutter
+Plug 'godlygeek/tabular'               " plugin for aligning text, required for vim-markdown
+Plug 'plasticboy/vim-markdown'         " enable mardown syntax support
+Plug 'vim-scripts/matchit.zip'         " make % highlights mating tags
+Plug 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
+Plug 'chriskempson/base16-vim'         " base16 colorscheme for vim
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'rking/ag.vim'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'tpope/vim-vinegar'
+Plug 'itchyny/lightline.vim'
+Plug 'prettier/vim-prettier'
 
-call vundle#end()            " required
-
-" don't let vundle mess with indentation / folding for markdown files
-filetype plugin on
+call plug#end()
 
 " ----- look and feel ----- "
 syntax on                       " enable syntax highlighting
@@ -77,7 +46,7 @@ set ruler                       " show ruler (vim-airline will take care of this
 set number                      " show line numbers
 set title                       " show file name in title bar
 set hlsearch                    " highlight search researchs
-"set showbreak=↪                 " display this character for line break
+set showbreak=↪                 " display this character for line break
 set linespace=3                 " spaces between lines
 "set cursorline                  " highlight current line where the cursor is at
 set scrolloff=5                 " number of lines to keep from the edge when scrolling
@@ -195,12 +164,6 @@ endif
 " bind Ctrl-F to grep shortcut
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap <C-F> :Ag<SPACE>
-
-" vim-airline
-" let g:airline_powerline_fonts = 1                   " use powerline-patched fonts
-" let g:airline#extensions#tabline#left_sep = ' '     " use | instead of > for bufferline
-" let g:airline#extensions#tabline#left_alt_sep = '|'
-" let g:airline_theme='papercolor'
 
 " vim-lightline
 let g:lightline = { 'colorscheme': 'one' }

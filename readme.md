@@ -35,7 +35,7 @@ then symlink kitty's config file.
 ln -s ~/code/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 ```
 
-### vim
+### Vim
 
 my vim setup requires [ag](https://github.com/ggreer/the_silver_searcher)
 and [editorconfig](http://editorconfig.org), which can be installed by
@@ -44,18 +44,21 @@ and [editorconfig](http://editorconfig.org), which can be installed by
 brew install the_silver_searcher editorconfig
 ```
 
-then set up vim and vundle.
+then set up Vim and [Plug](https://github.com/junegunn/vim-plug)
 
 ```sh
 ln -s ~/code/dotfiles/.vim ~/.vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ln -s ~/code/dotfiles/.vimrc ~/.vimrc
-vim +PluginInstall +qall
 ```
 
-adding new plugin / updating existing plugins, see [Vundle](https://github.com/gmarik/Vundle.vim)
+Install Plug from [https://github.com/junegunn/vim-plug#unix](https://github.com/junegunn/vim-plug#unix),
+then install plugins with
 
-### vscode
+```sh
+vim +PlugInstall +qall
+```
+
+### VSCode
 
 enable key-repeat for vscode (with vim extenstion)
 
@@ -64,7 +67,7 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults delete -g ApplePressAndHoldEnabled
 ```
 
-don't forget to add 'markdown' in the config after installed Prettier: 
+don't forget to add 'markdown' in the config after installed Prettier:
 ```json
 "prettier.disabledLanguages": [
   "markdown"
