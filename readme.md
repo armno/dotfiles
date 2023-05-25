@@ -136,6 +136,8 @@ install [`zoxide`](https://github.com/ajeetdsouza/zoxide)
 
 ```sh
 brew install bat
+mkdir -p ~/.config/bat
+ln -s .config/bat/config ~/.config/bat/config
 ```
 
 ### fzf
