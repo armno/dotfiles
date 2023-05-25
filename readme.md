@@ -2,7 +2,7 @@
 
 ## setting up
 
-clone this repo
+Clone this repo
 
 ```sh
 cd ~/code
@@ -11,7 +11,7 @@ git clone git@github.com:armno/dotfiles.git
 
 ### oh-my-zsh
 
-switch to `zsh` from `bash`: install `oh-my-zsh` and follow the instructions there.
+Switch to `zsh` from `bash`: install `oh-my-zsh` and follow the instructions there.
 
 use my customized theme based on "cloud" for [oh-my-zsh](http://ohmyz.sh/). assuming oh-my-zsh is installed:
 
