@@ -9,18 +9,11 @@ cd ~/code
 git clone git@github.com:armno/dotfiles.git
 ```
 
-### oh-my-zsh
-
-Switch to `zsh` from `bash`: install `oh-my-zsh` and follow the instructions there.
-
-use my customized theme based on "cloud" for [oh-my-zsh](http://ohmyz.sh/). assuming oh-my-zsh is installed:
+### brew
 
 ```sh
-ln -s ~/code/dotfiles/cloud-armno.zsh-theme ~/.oh-my-zsh/themes/cloud-armno.zsh-theme
+brew install exa zoxide coreutils jandedobbeleer/oh-my-posh/oh-my-posh the_silver_searcher editorconfig git-delta bat fzf
 ```
-
-then change `ZSH_THEME` option in `~/.zshrc` file to `cloud-armno`
-
 ### base16-shell
 
 install it [here](https://github.com/chriskempson/base16-shell)
@@ -39,10 +32,6 @@ ln -s ~/code/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
 my vim setup requires [ag](https://github.com/ggreer/the_silver_searcher)
 and [editorconfig](http://editorconfig.org), which can be installed by
-
-```sh
-brew install the_silver_searcher editorconfig
-```
 
 then set up Vim and [Plug](https://github.com/junegunn/vim-plug)
 
@@ -76,18 +65,7 @@ don't forget to add 'markdown' in the config after installed Prettier:
 
 ### git
 
-- `git diff` is using [delta](https://dandavison.github.io/delta/)
-
-```sh
-brew install git-delta
-```
-
-- create symlinks for global config file and commit template
-
-```sh
-ln -s ~/code/dotfiles/.gitconfig ~/.gitconfig
-ln -s ~/code/dotfiles/.gitmessage ~/.gitmessage
-```
+TODO: - extend common gitconfig.
 
 ### osx
 
@@ -105,13 +83,6 @@ ln -s ~/code/dotfiles/.aliases ~/.aliases
 ln -s ~/code/dotfiles/.functions ~/.functions
 ```
 
-add in `~/.zshrc` file
-
-```
-source ~/.aliases
-source ~/.functions
-```
-
 ### ag
 
 `ag`'s ignored patterns. normally `ag` ignores patterns in `.gitignore` file but still, there are some files in the repo that shouldn't show up in `CtrlP`.
@@ -126,34 +97,13 @@ ln -s ~/code/dotfiles/.agignore ~/.agignore
 touch ~/.hushlogin
 ```
 
-### zoxide
-
-install [`zoxide`](https://github.com/ajeetdsouza/zoxide)
-
 ### bat
 
 [`bat`](https://github.com/sharkdp/bat) another kind of `cat`.
 
 ```sh
-brew install bat
 mkdir -p ~/.config/bat
 ln -s .config/bat/config ~/.config/bat/config
-```
-
-### fzf
-
-shamelessly stole `preview` alias from Remy Sharp's ["CLI: Improved"](https://remysharp.com/2018/08/23/cli-improved) post.
-
-```sh
-brew install fzf
-```
-
-### exa
-
-use `exa` instead of `ls`
-
-```sh
-brew install exa
 ```
 
 ### keyboard

@@ -7,7 +7,6 @@ alias .....="cd ../../../.."
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
-alias rm="trash"
 alias ls="exa"
 alias ll="exa --long --header --classify --git"
 alias tree="exa --tree"
