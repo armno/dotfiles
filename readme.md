@@ -9,20 +9,29 @@ cd ~/code
 git clone git@github.com:armno/dotfiles.git
 ```
 
-### brew
+### homebrew
+
+[Install Homebrew](https://brew.sh/), then install all packages needed for the set up mentioned in this readme.
 
 ```sh
 brew install exa zoxide coreutils jandedobbeleer/oh-my-posh/oh-my-posh the_silver_searcher editorconfig git-delta bat fzf
 ```
+
+### oh-my-posh
+
+TODO: omp theme
+
 ### base16-shell
 
-install it [here](https://github.com/chriskempson/base16-shell)
+Install it [here](https://github.com/chriskempson/base16-shell)
 
 ### kitty
 
-install kitty from [https://sw.kovidgoyal.net/kitty/binary/](https://sw.kovidgoyal.net/kitty/binary/)
+Kitty is my terminal app of choice.
 
-then symlink kitty's config file.
+Install kitty from [https://sw.kovidgoyal.net/kitty/binary/](https://sw.kovidgoyal.net/kitty/binary/)
+
+Then symlink kitty's config file.
 
 ```sh
 ln -s ~/code/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
@@ -30,15 +39,8 @@ ln -s ~/code/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
 
 ### Vim
 
-my vim setup requires [ag](https://github.com/ggreer/the_silver_searcher)
-and [editorconfig](http://editorconfig.org), which can be installed by
-
-then set up Vim and [Plug](https://github.com/junegunn/vim-plug)
-
-```sh
-ln -s ~/code/dotfiles/.vim ~/.vim
-ln -s ~/code/dotfiles/.vimrc ~/.vimrc
-```
+My Vim setup requires [ag](https://github.com/ggreer/the_silver_searcher)
+and [editorconfig](http://editorconfig.org), which are already installed by the brew command above.
 
 Install Plug from [https://github.com/junegunn/vim-plug#unix](https://github.com/junegunn/vim-plug#unix),
 then install plugins with
@@ -47,16 +49,41 @@ then install plugins with
 vim +PlugInstall +qall
 ```
 
+and symlink Vim's config file
+
+```sh
+ln -s ~/code/dotfiles/.vimrc ~/.vimrc
+```
+
+### Keyboard Tweaks
+
+Enable key repeats
+
+```sh
+defaults write -g ApplePressAndHoldEnabled -bool false
+```
+
+Make keyboard key repeats faster
+
+```sh
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+```
+
+Go to **System Preferences > Keyboard**. Set Key Repeat to be `fastest` and Delay Until Report to be `shortest`.
+
 ### VSCode
 
-enable key-repeat for vscode (with vim extenstion)
+Enable key-repeat for VScode when using it with Vim extenstion.
+To be honest, I don't know which one works.
 
 ```sh
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 defaults delete -g ApplePressAndHoldEnabled
 ```
 
-don't forget to add 'markdown' in the config after installed Prettier:
+Don't forget to add 'markdown' in the config after installed Prettier:
+
 ```json
 "prettier.disabledLanguages": [
   "markdown"
@@ -65,27 +92,42 @@ don't forget to add 'markdown' in the config after installed Prettier:
 
 ### git
 
-TODO: - extend common gitconfig.
+Create a local .gitconfig file that extends the one in this repo
+
+```sh
+touch ~/.gitconfig
+```
+
+And put custom Git config there. For example:
+
+```
+[include]
+  path = ~/code/dotfiles/.gitconfig
+
+[user]
+  name = Another Armno
+  email = anotheremail
+```
 
 ### osx
 
-(this doesn't do anything i think. it just creates a symlink without actually run the commands inside.)
+TODO: This doesn't do anything i think. it just creates a symlink without actually run the commands inside.
 
 ```sh
 ln -s ~/code/dotfiles/.osx ~/.osx
 killall SystemUIServer
 ```
 
-### aliases, functions
+### Aliases and Functions
 
 ```sh
 ln -s ~/code/dotfiles/.aliases ~/.aliases
 ln -s ~/code/dotfiles/.functions ~/.functions
 ```
 
-### ag
+### Ag
 
-`ag`'s ignored patterns. normally `ag` ignores patterns in `.gitignore` file but still, there are some files in the repo that shouldn't show up in `CtrlP`.
+`ag`'s ignored patterns. Normally `ag` ignores patterns in `.gitignore` file but still, there are some files in the repo that shouldn't show up in `CtrlP`.
 
 ```sh
 ln -s ~/code/dotfiles/.agignore ~/.agignore
@@ -106,19 +148,3 @@ mkdir -p ~/.config/bat
 ln -s .config/bat/config ~/.config/bat/config
 ```
 
-### keyboard
-
-enable key repeats
-
-```sh
-defaults write -g ApplePressAndHoldEnabled -bool false
-```
-
-make keyboard key repeats faster
-
-```sh
-defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
-defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
-```
-
-go to **System Preferences > Keyboard**. Set Key Repeat to be `fastest` and Delay Until Report to be `shortest`.

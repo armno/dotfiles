@@ -24,7 +24,7 @@ Plug 'pangloss/vim-javascript'         " syntax and indent plugin for javascript
 Plug 'chriskempson/base16-vim'         " base16 colorscheme for vim
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
-Plug 'rking/ag.vim'
+" Plug 'rking/ag.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'itchyny/lightline.vim'
@@ -41,7 +41,7 @@ if (has("termguicolors"))
 endif
 
 let base16colorspace=256
-colorscheme base16-material-darker
+colorscheme base16-eighties
 set ruler                       " show ruler (vim-airline will take care of this anyway)
 set number                      " show line numbers
 set title                       " show file name in title bar
@@ -162,8 +162,8 @@ endif
 " nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 " bind Ctrl-F to grep shortcut
-command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-nnoremap <C-F> :Ag<SPACE>
+" command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+" nnoremap <C-F> :Ag<SPACE>
 
 " vim-lightline
 let g:lightline = { 'colorscheme': 'one' }
