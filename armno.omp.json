@@ -1,0 +1,86 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+				{
+					"type": "os",
+					"style": "plain",
+					"background": "transparent",
+          "foreground": "#575656",
+					"template": "{{.Icon}} "
+				},
+        {
+          "background": "#383838",
+          "foreground": "#A1B56C",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "diamond",
+          "template": "\ue5ff  {{ .Path }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "path"
+        },
+        {
+          "background": "#383838",
+          "foreground": "#7CAFC2",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+						"fetch_upstream_icon": true,
+            "branch_icon": " \uE0A0 "
+          },
+          "style": "diamond",
+          "template": "{{ .UpstreamIcon }}{{ .HEAD }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "git"
+        },
+        {
+          "background": "transparent",
+          "foreground": "#F7CA88",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+						"fetch_status": true
+          },
+          "style": "diamond",
+          "template": "{{if .Working }} {{ .Working }}{{ end }}",
+          "trailing_diamond": "\ue0b4",
+          "type": "git"
+        },
+        {
+          "background": "transparent",
+          "foreground": "#575656",
+          "leading_diamond": "\ue0b6",
+          "properties": {
+            "style": "austin",
+            "threshold": 150
+          },
+          "style": "diamond",
+          "template": " {{ .FormattedMs }} ",
+          "trailing_diamond": "\ue0b4 ",
+          "type": "executiontime"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "background": "transparent",
+          "foreground": "#575656",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": "\u276f",
+          "trailing_diamond": "\ue0b4",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}

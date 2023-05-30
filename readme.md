@@ -9,6 +9,10 @@ cd ~/code
 git clone git@github.com:armno/dotfiles.git
 ```
 
+### Switching from bash to zsh
+
+TODO: I don't even remember how.
+
 ### homebrew
 
 [Install Homebrew](https://brew.sh/), then install all packages needed for the set up mentioned in this readme.
@@ -19,7 +23,7 @@ brew install exa zoxide coreutils jandedobbeleer/oh-my-posh/oh-my-posh the_silve
 
 ### oh-my-posh
 
-TODO: omp theme
+The .zshrc points to [my custom oh-my-posh theme](./armno.omp.json), which is a still WIP.
 
 ### base16-shell
 

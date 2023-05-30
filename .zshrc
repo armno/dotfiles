@@ -9,7 +9,7 @@ source ~/.aliases
 source ~/.functions
 
 eval "$(fnm env --use-on-cd)"
-eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/emodipt-extend.omp.json)"
+eval "$(oh-my-posh init zsh --config ~/code/dotfiles/armno.omp.json)"
 
 # https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search
