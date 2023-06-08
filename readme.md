@@ -21,9 +21,10 @@ TODO: I don't even remember how.
 brew install exa zoxide coreutils jandedobbeleer/oh-my-posh/oh-my-posh the_silver_searcher editorconfig git-delta bat fzf
 ```
 
-### oh-my-posh
+### oh-my-posh / starship
 
-The .zshrc points to [my custom oh-my-posh theme](./armno.omp.json), which is a still WIP.
+I'm trying out both [oh-my-posh](https://ohmyposh.dev/) and [starship](https://starship.rs/).
+This repo contains configs for both. The switch is in `.zhsrc` file.
 
 Install Nerd Fonts from [https://ohmyposh.dev/docs/installation/fonts](https://ohmyposh.dev/docs/installation/fonts)
 
