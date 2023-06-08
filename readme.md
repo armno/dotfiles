@@ -25,6 +25,8 @@ brew install exa zoxide coreutils jandedobbeleer/oh-my-posh/oh-my-posh the_silve
 
 The .zshrc points to [my custom oh-my-posh theme](./armno.omp.json), which is a still WIP.
 
+Install Nerd Fonts from [https://ohmyposh.dev/docs/installation/fonts](https://ohmyposh.dev/docs/installation/fonts)
+
 ### base16-shell
 
 Install it [here](https://github.com/chriskempson/base16-shell)
