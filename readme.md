@@ -18,7 +18,7 @@ TODO: I don't even remember how.
 [Install Homebrew](https://brew.sh/), then install all packages needed for the set up mentioned in this readme.
 
 ```sh
-brew install exa zoxide coreutils jandedobbeleer/oh-my-posh/oh-my-posh the_silver_searcher editorconfig git-delta bat fzf
+brew install exa zoxide coreutils jandedobbeleer/oh-my-posh/oh-my-posh the_silver_searcher editorconfig git-delta bat fzf starship
 ```
 
 ### oh-my-posh / starship
@@ -26,7 +26,14 @@ brew install exa zoxide coreutils jandedobbeleer/oh-my-posh/oh-my-posh the_silve
 I'm trying out both [oh-my-posh](https://ohmyposh.dev/) and [starship](https://starship.rs/).
 This repo contains configs for both. The switch is in `.zhsrc` file.
 
-Install Nerd Fonts from [https://ohmyposh.dev/docs/installation/fonts](https://ohmyposh.dev/docs/installation/fonts)
+starship:
+
+1. Install Nerd Fonts from [https://ohmyposh.dev/docs/installation/fonts](https://ohmyposh.dev/docs/installation/fonts)
+2. symlink the config file
+
+```sh
+ln -s ~/code/dotfiles/.config/starship.toml ~/.config/starship.toml
+```
 
 ### base16-shell
 
