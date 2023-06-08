@@ -5,7 +5,7 @@
 add_newline = false
 
 format = """
-[](bright-black) $directory\
+[](fg:245) $directory\
 $git_branch\
 $git_state\
 $git_status\
@@ -17,14 +17,15 @@ $character"""
 style = "green bold"
 
 [character]
-success_symbol = "[](bright-black)"
+success_symbol = "[](fg:245)"
 error_symbol = "[](red)"
 vimcmd_symbol = "[](green)"
 
 [git_branch]
-format = "[$symbol $branch]($style)"
+format = "[$symbol $branch]($style) [$remote_name/$remote_branch](bright-black)"
 symbol = "󰊤"
 style = "bright-blue"
+always_show_remote = true
 
 [git_status]
 format = "[ [($conflicted$untracked$modified$staged$renamed$deleted)]($style)($ahead_behind$stashed)]($style) "
