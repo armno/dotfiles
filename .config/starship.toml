@@ -5,38 +5,30 @@
 add_newline = false
 
 format = """
-$username\
-$hostname\
 $directory\
 $git_branch\
 $git_state\
 $git_status\
 $cmd_duration\
 $line_break\
-$python\
 $character"""
 
 [directory]
 style = "green bold"
 
 [character]
-success_symbol = "[❯](bright black)"
+success_symbol = "[❯](bright-black)"
 error_symbol = "[❯](red)"
 vimcmd_symbol = "[❮](green)"
 
 [git_branch]
-format = "[$branch]($style)"
-style = "bright-black"
+format = "[$symbol $branch]($style)"
+symbol = "󰊤"
+style = "bright-blue"
 
 [git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
-style = "cyan"
-conflicted = "​"
-untracked = "​"
-modified = "​"
-staged = "​"
-renamed = "​"
-deleted = "​"
+format = "[ [($conflicted$untracked$modified$staged$renamed$deleted)]($style)($ahead_behind$stashed)]($style) "
+style = "yellow"
 stashed = "≡"
 
 [git_state]
@@ -45,10 +37,6 @@ style = "bright-black"
 
 [cmd_duration]
 format = "[$duration]($style) "
-style = "yellow"
-
-[python]
-format = "[$virtualenv]($style) "
 style = "bright-black"
 
 # Disable the package module, hiding it from the prompt completely
