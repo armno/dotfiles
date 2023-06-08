@@ -11,10 +11,10 @@ source ~/.functions
 eval "$(fnm env --use-on-cd)"
 
 # oh-my-posh
-eval "$(oh-my-posh init zsh --config ~/code/dotfiles/armno.omp.json)"
+# eval "$(oh-my-posh init zsh --config ~/code/dotfiles/armno.omp.json)"
 
 # or starship
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 # https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search
