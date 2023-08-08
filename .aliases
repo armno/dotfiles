@@ -33,3 +33,4 @@ alias sm="source-map-explorer"
 alias dc="docker-compose"
 alias wb="webpack-bundle-analyzer"
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+alias f="fnm"
