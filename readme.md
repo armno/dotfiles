@@ -18,7 +18,7 @@ Zsh should be the default shell for a new Mac already.
 [Install Homebrew](https://brew.sh/), then install all packages needed for the set up mentioned in this readme.
 
 ```sh
-brew install exa zoxide coreutils editorconfig git-delta bat fzf starship
+brew install exa zoxide coreutils editorconfig git-delta bat fzf starship fnm
 ```
 
 ### iTerm
@@ -29,6 +29,13 @@ brew install exa zoxide coreutils editorconfig git-delta bat fzf starship
 ```sh
 ln -s ~/code/dotfiles/.zshrc ~/.zshrc
 ```
+
+zsh plugins
+
+```sh
+brew install zsh-autosuggestion zsh-syntax-highlighting
+```
+check `brew info zsh-autosuggestions` and `brew info zsh-autosuggestions` and update paths in `.zshrc` if needed.
 
 ### Aliases and Functions
 
