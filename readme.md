@@ -11,7 +11,7 @@ git clone git@github.com:armno/dotfiles.git
 
 ### Switching from bash to zsh
 
-TODO: I don't even remember how.
+Zsh should be the default shell for a new Mac already.
 
 ### homebrew
 
@@ -19,6 +19,22 @@ TODO: I don't even remember how.
 
 ```sh
 brew install exa zoxide coreutils editorconfig git-delta bat fzf starship
+```
+
+### iTerm
+
+1. Download iTerm
+2. Symlink `.zshrc` config
+
+```sh
+ln -s ~/code/dotfiles/.zshrc ~/.zshrc
+```
+
+### Aliases and Functions
+
+```sh
+ln -s ~/code/dotfiles/.aliases ~/.aliases
+ln -s ~/code/dotfiles/.functions ~/.functions
 ```
 
 ### starship
@@ -33,18 +49,6 @@ ln -s ~/code/dotfiles/.config/starship.toml ~/.config/starship.toml
 ### base16-shell
 
 Install it [here](https://github.com/chriskempson/base16-shell)
-
-### kitty
-
-Kitty is my terminal app of choice.
-
-Install kitty from [https://sw.kovidgoyal.net/kitty/binary/](https://sw.kovidgoyal.net/kitty/binary/)
-
-Then symlink kitty's config file.
-
-```sh
-ln -s ~/code/dotfiles/kitty.conf ~/.config/kitty/kitty.conf
-```
 
 ### Vim
 
@@ -65,6 +69,8 @@ ln -s ~/code/dotfiles/.vimrc ~/.vimrc
 ```
 
 ### Keyboard Tweaks
+
+TODO: macOS 13.x doesn't need these settings anymore i think
 
 Enable key repeats
 
@@ -125,13 +131,6 @@ TODO: This doesn't do anything i think. it just creates a symlink without actual
 ```sh
 ln -s ~/code/dotfiles/.osx ~/.osx
 killall SystemUIServer
-```
-
-### Aliases and Functions
-
-```sh
-ln -s ~/code/dotfiles/.aliases ~/.aliases
-ln -s ~/code/dotfiles/.functions ~/.functions
 ```
 
 ### Ag
