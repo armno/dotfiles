@@ -18,7 +18,7 @@ TODO: I don't even remember how.
 [Install Homebrew](https://brew.sh/), then install all packages needed for the set up mentioned in this readme.
 
 ```sh
-brew install exa zoxide coreutils jandedobbeleer/oh-my-posh/oh-my-posh the_silver_searcher editorconfig git-delta bat fzf starship
+brew install exa zoxide coreutils editorconfig git-delta bat fzf starship
 ```
 
 ### oh-my-posh / starship
