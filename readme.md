@@ -9,11 +9,7 @@ cd ~/code
 git clone git@github.com:armno/dotfiles.git
 ```
 
-### Switching from bash to zsh
-
-Zsh should be the default shell for a new Mac already.
-
-### homebrew
+### Homebrew
 
 [Install Homebrew](https://brew.sh/), then install all packages needed for the set up mentioned in this readme.
 
@@ -23,7 +19,7 @@ brew install exa zoxide coreutils editorconfig git-delta bat fzf starship fnm
 
 ### iTerm
 
-1. Download iTerm
+1. Download iTerm3
 2. Symlink `.zshrc` config
 
 ```sh
@@ -44,7 +40,7 @@ ln -s ~/code/dotfiles/.aliases ~/.aliases
 ln -s ~/code/dotfiles/.functions ~/.functions
 ```
 
-### starship
+### Starship
 
 1. Install Nerd Fonts from [https://ohmyposh.dev/docs/installation/fonts](https://ohmyposh.dev/docs/installation/fonts)
 2. symlink the config file
@@ -53,9 +49,13 @@ ln -s ~/code/dotfiles/.functions ~/.functions
 ln -s ~/code/dotfiles/.config/starship.toml ~/.config/starship.toml
 ```
 
-### base16-shell
+### Base16-shell
 
-Install it [here](https://github.com/chriskempson/base16-shell)
+Install it [here](https://github.com/chriskempson/base16-shell) and activate the theme
+
+```sh
+base16_material-darker
+```
 
 ### Vim
 
@@ -112,7 +112,7 @@ Don't forget to add 'markdown' in the config after installed Prettier:
 ]
 ```
 
-### git
+### Git
 
 Create a local .gitconfig file that extends the one in this repo
 
@@ -138,14 +138,6 @@ TODO: This doesn't do anything i think. it just creates a symlink without actual
 ```sh
 ln -s ~/code/dotfiles/.osx ~/.osx
 killall SystemUIServer
-```
-
-### Ag
-
-`ag`'s ignored patterns. Normally `ag` ignores patterns in `.gitignore` file but still, there are some files in the repo that shouldn't show up in `CtrlP`.
-
-```sh
-ln -s ~/code/dotfiles/.agignore ~/.agignore
 ```
 
 ### Remove 'Last Login' message
