@@ -21,12 +21,7 @@ TODO: I don't even remember how.
 brew install exa zoxide coreutils editorconfig git-delta bat fzf starship
 ```
 
-### oh-my-posh / starship
-
-I'm trying out both [oh-my-posh](https://ohmyposh.dev/) and [starship](https://starship.rs/).
-This repo contains configs for both. The switch is in `.zhsrc` file.
-
-starship:
+### starship
 
 1. Install Nerd Fonts from [https://ohmyposh.dev/docs/installation/fonts](https://ohmyposh.dev/docs/installation/fonts)
 2. symlink the config file
