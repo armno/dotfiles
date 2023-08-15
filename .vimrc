@@ -10,7 +10,7 @@ call plug#begin()
 
                                          " ----- plugins to be installed via vundle -----
 Plug 'ctrlpvim/ctrlp.vim'              " sublime-text-like Cmd+P - navigate through files
-Plug 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
+" Plug 'tacahiroy/ctrlp-funky'           " sublime-text-like Cmd+R - navigate through functions
 Plug 'mattn/emmet-vim'                 " emmet for vim
 Plug 'ervandew/supertab'               " enable using <tab> for completion
 Plug 'Lokaltog/vim-easymotion'         " make search better
@@ -29,6 +29,8 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'itchyny/lightline.vim'
 Plug 'prettier/vim-prettier'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -142,14 +144,14 @@ map  n <Plug>(easymotion-next)
 map  N <Plug>(easymotion-prev)
 
 " ctrlp/ctrlp-funky plugins
-let g:ctrlp_user_command = 'ag %s --hidden -l --nocolor -g ""' " use ag to perform search (faster) https://github.com/ggreer/the_silver_searcher
+" let g:ctrlp_user_command = 'ag %s --hidden -l --nocolor -g ""' " use ag to perform search (faster) https://github.com/ggreer/the_silver_searcher
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_use_caching = 0                         " ag is fast enough that CtrlP doesn't need to cache
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_extensions = ['funky']
-let g:ctrlp_funky_syntax_highlight = 1
-nnoremap <leader>r :CtrlPFunky<Cr>
+let g:ctrlp_cmd = 'GFiles'
+" let g:ctrlp_use_caching = 0                         " ag is fast enough that CtrlP doesn't need to cache
+" set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+" let g:ctrlp_extensions = ['funky']
+" let g:ctrlp_funky_syntax_highlight = 1
+" nnoremap <leader>r :CtrlPFunky<Cr>
 
 " The Silver Searcher
 " https://robots.thoughtbot.com/faster-grepping-in-vim
