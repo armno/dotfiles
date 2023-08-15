@@ -189,5 +189,8 @@ let g:jsx_ext_required = 0
 " netrw directory style
 let g:netrw_liststyle=3
 
+" fzf.vim options
+let g:fzf_preview_window = ['hidden,down,50%', 'ctrl-/']
+
 let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.ts,*.json,*.css,*.scss,*.less,*.graphql PrettierAsync
