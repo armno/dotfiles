@@ -14,7 +14,7 @@ git clone git@github.com:armno/dotfiles.git
 [Install Homebrew](https://brew.sh/), then install all packages needed for the set up mentioned in this readme.
 
 ```sh
-brew install exa zoxide coreutils editorconfig git-delta bat fzf starship fnm
+brew install eza zoxide coreutils editorconfig git-delta bat fzf starship fnm
 ```
 
 ### iTerm

@@ -7,9 +7,9 @@ alias .....="cd ../../../.."
 # Recursively delete `.DS_Store` files
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
-alias ls="exa"
-alias ll="exa --long --header --classify --git"
-alias tree="exa --tree"
+alias ls="eza"
+alias ll="eza --long --header --classify --git"
+alias tree="eza --tree"
 alias please="sudo" # be nice
 alias fuck='sudo $(history -p \!\!)'
 alias server="http-server -s -o"
