@@ -48,7 +48,7 @@ set ruler                       " show ruler (vim-airline will take care of this
 set number                      " show line numbers
 set title                       " show file name in title bar
 set hlsearch                    " highlight search researchs
-set showbreak=↪                 " display this character for line break
+"set showbreak=↪                 " display this character for line break
 set linespace=3                 " spaces between lines
 "set cursorline                  " highlight current line where the cursor is at
 set scrolloff=5                 " number of lines to keep from the edge when scrolling

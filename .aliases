@@ -8,7 +8,7 @@ alias .....="cd ../../../.."
 alias cleanup="find . -name '*.DS_Store' -type f -ls -delete"
 
 alias ls="eza"
-alias ll="eza --long --header --classify --git"
+alias ll="eza --long --header --classify"
 alias tree="eza --tree"
 alias please="sudo" # be nice
 alias fuck='sudo $(history -p \!\!)'
@@ -19,13 +19,13 @@ alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias canary="open -n -a /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --user-data-dir=\"/tmp/chrome_dev_test\" --disable-web-security --disable-translate --disable-crash-reporter --disable-breakpad --disable-reporting"
 alias bew="brew update && brew upgrade && brew cleanup"
 alias sim="open -a simulator"
-alias dark="base16_material-darker && git config --global delta.syntax-theme zenburn"
+alias dark="base16_material-darker && git config --global delta.syntax-theme 1337"
 alias light="base16_cupertino && git config --global delta.syntax-theme GitHub"
 alias preview="fzf --preview 'bat --color \"always\" {}'"
-alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color="always" {+2} | diff-so-fancy' \
+alias gd="git status -s | fzf --no-sort --reverse --preview 'git diff --color="always" {+2} | delta' \
 --bind=ctrl-j:preview-down --bind=ctrl-k:preview-up \
 --preview-window=right:70%:wrap"
-alias gds="git status -s | fzf --no-sort --reverse --preview 'git diff --staged --color="always" {+2} | diff-so-fancy' \
+alias gds="git status -s | fzf --no-sort --reverse --preview 'git diff --staged --color="always" {+2} | delta' \
 --bind=ctrl-j:preview-down --bind=ctrl-k:preview-up \
 --preview-window=right:70%:wrap"
 alias blog="z blog && hugo server --buildDrafts --noHTTPCache"
@@ -34,3 +34,10 @@ alias dc="docker-compose"
 alias wb="webpack-bundle-analyzer"
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias f="fnm"
+alias convert="echo $1"
+alias tabb="tabby serve --device metal --model StarCoder-1B --chat-model Qwen2-1.5B-Instruct"
+alias sup="git status"
+alias poh="git push origin HEAD"
+alias fetch="git fetch --tags"
+alias yep="git add ."
+alias commit="git commit"

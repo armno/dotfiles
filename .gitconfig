@@ -10,7 +10,7 @@
 [color]
 	ui = true
 [alias]
-	poh = push origin HEAD
+	poh = push -u origin HEAD
 	pom = push origin main
   undo = reset HEAD~1
 	ls = log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate
@@ -23,6 +23,7 @@
 	fo = fetch origin
 	mo = merge origin/master
 	co = checkout
+	cod = checkout develop
 	diffm = diff --diff-filter=M
 	df = diff --staged
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
@@ -54,9 +55,10 @@
 [delta]
 	#plus-color = "#012800"
 	#minus-style = brightred
-	syntax-theme = zenburn
-	features = decorations line-numbers
+	syntax-theme = Dracula
+	features = line-numbers
 	side-by-side = false
+	line-numbers = false
 [delta "decorations"]
 	commit-decoration-style = bold yellow box
 	file-style = bold yellow ul
