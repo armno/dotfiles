@@ -41,14 +41,16 @@
 # resize-overlay-duration = 4s 200ms
 
 font-family = JetBrains Mono
-font-size = 15
+font-size = 14
 font-feature = calt,liga
-adjust-cell-height = 30%
+adjust-cell-height = 40%
 window-padding-y = 20
 window-padding-x = 20
 window-width = 130
 window-height = 40
-working-directory = /Users/armno/code
 window-inherit-working-directory = true
+window-decoration = none
+working-directory = /Users/armno/code
 shell-integration-features = no-cursor
 cursor-style = block
+macos-icon = xray
