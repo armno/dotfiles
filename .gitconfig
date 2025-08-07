@@ -10,6 +10,7 @@
 [color]
 	ui = true
 [alias]
+	s = status
 	poh = push -u origin HEAD
 	pom = push origin main
   undo = reset HEAD~1

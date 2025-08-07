@@ -17,10 +17,19 @@ git clone git@github.com:armno/dotfiles.git
 brew install eza zoxide coreutils editorconfig git-delta bat fzf starship fnm
 ```
 
-### iTerm
+### Ghostty
 
-1. Download iTerm3
-2. Symlink `.zshrc` config
+1. [Download Ghostty](https://ghostty.org/)
+2. Symlink Ghostty config file
+
+```sh
+mkdir -p ~/.config/ghostty
+ln -s ~/code/dotfiles/.config/ghostty/config ~/.config/ghostty/config
+```
+
+### zsh
+
+Symlink `.zshrc` config
 
 ```sh
 ln -s ~/code/dotfiles/.zshrc ~/.zshrc
