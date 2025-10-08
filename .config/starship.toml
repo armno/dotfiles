@@ -33,7 +33,7 @@ diverged = '⇕⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
 stashed = "≡"
 style = "yellow"
-format = "[ [($conflicted$untracked$modified$staged$renamed$deleted)]($style)( $ahead_behind $stashed )](bright-yellow) "
+format = "[ [($conflicted$untracked$modified$staged$renamed$deleted)]($style)($ahead_behind $stashed)](bright-yellow) "
 
 [git_state]
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
