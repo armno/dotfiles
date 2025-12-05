@@ -42,3 +42,6 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/Users/armno/.opencode/bin:$PATH

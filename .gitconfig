@@ -30,6 +30,10 @@
 	cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop' | xargs -n 1 git branch -d"
 	branches = branch -a
 	diffp = diff ':!package-lock.json'
+	comit = commit
+	commti = commit
+	commmit = commit
+	committ = commit
 [color "status"]
 	added = green
 	changed = yellow
