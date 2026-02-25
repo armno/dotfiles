@@ -1,9 +1,9 @@
 eval "$(zoxide init zsh)"
 
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        source "$BASE16_SHELL/profile_helper.sh"
+#BASE16_SHELL="$HOME/.config/base16-shell/"
+#[ -n "$PS1" ] && \
+#    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#        source "$BASE16_SHELL/profile_helper.sh"
 
 source ~/.aliases
 source ~/.functions
@@ -45,3 +45,11 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
 export PATH=/Users/armno/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/Users/armno/.bun/_bun" ] && source "/Users/armno/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export EDITOR=vim
