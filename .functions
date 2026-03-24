@@ -38,6 +38,11 @@ function vid() {
   ffmpeg -i $1 -vcodec libx264 -crf 20 _${1}
 }
 
+# optimize video file and speed up to 2x
+function vid2x() {
+	ffmpeg -i $1 -vcodec libx264 -crf 20 -vf "setpts=0.5*PTS" -af "atempo=2.0" _${1}
+}
+
 # stack 2 video files horizontally e.g. put them for side-by-side comparison
 function mergeVid() {
 	ffmpeg -i $1 -i $2 -filter_complex "[0:v]pad=iw:1370:0:(1370-1334)/2:black[v0]; [1:v]setpts=PTS[v1]; [v0][v1]hstack[v]" -map "[v]" -c:v libx264 -crf 23 _merged-${1}

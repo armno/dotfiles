@@ -41,7 +41,7 @@
 # resize-overlay-duration = 4s 200ms
 
 font-family = JetBrains Mono
-font-size = 14
+font-size = 15
 font-feature = calt,liga
 adjust-cell-height = 40%
 adjust-cell-width = -5%
@@ -60,4 +60,4 @@ macos-titlebar-style = tabs
 copy-on-select = clipboard
 keybind = ctrl+f=write_scrollback_file:open
 macos-option-as-alt = true
-theme = Monokai Pro Spectrum
+theme = Monokai Pro Octagon
