@@ -65,9 +65,9 @@
 	side-by-side = false
 	line-numbers = false
 	minus-style = "white #600000"
-	minus-emph-style = "white #A20000 bold"
+	minus-emph-style = "white #820020 bold"
 	plus-style = "white #004060"
-	plus-emph-style = "white #002090 bold"
+	plus-emph-style = "white #004090 bold"
 [delta "decorations"]
 	commit-decoration-style = bold yellow box
 	file-style = bold yellow ul
