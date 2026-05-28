@@ -35,3 +35,4 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 alias f="fnm"
 alias convert="echo $1"
 alias diff="bunx critique" # always use the latest version of critique
+alias cc="claude"

@@ -38,11 +38,11 @@
 	added = green
 	changed = yellow
 	untracked = red
-#[color "diff"]
-#	meta = blue bold
-#	frag = magenta bold
-#	old = red bold
-#	new = green bold
+[color "diff"]
+	#meta = blue bold
+	#frag = magenta bold
+	old = red bold
+	new = blue bold
 [core]
 	editor = vim
 	autocrlf = false
@@ -60,10 +60,14 @@
 [delta]
 	#plus-color = "#012800"
 	#minus-style = brightred
-	syntax-theme = Dracula
+	syntax-theme = Dracular
 	features = line-numbers
 	side-by-side = false
 	line-numbers = false
+	minus-style = "white #600000"
+	minus-emph-style = "white #A20000 bold"
+	plus-style = "white #004060"
+	plus-emph-style = "white #002090 bold"
 [delta "decorations"]
 	commit-decoration-style = bold yellow box
 	file-style = bold yellow ul

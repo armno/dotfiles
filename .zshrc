@@ -35,6 +35,8 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 autoload -Uz compinit
 compinit
 
+zstyle ':completion:*' menu select
+zstyle ':completion:*' insert-unambiguous true
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
 
