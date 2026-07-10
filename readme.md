@@ -84,6 +84,14 @@ and symlink Vim's config file
 ln -s ~/code/dotfiles/.vimrc ~/.vimrc
 ```
 
+### tmux
+
+Symlink tmux config file
+
+```sh
+ln -s ~/code/dotfiles/.tmux.conf ~/.tmux.conf
+```
+
 ### Keyboard Tweaks
 
 TODO: macOS 13.x doesn't need these settings anymore i think
