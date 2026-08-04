@@ -92,6 +92,15 @@ Symlink tmux config file
 ln -s ~/code/dotfiles/.tmux.conf ~/.tmux.conf
 ```
 
+### Herdr
+
+Symlink Herdr config file
+
+```sh
+mkdir -p ~/.config/herdr
+ln -s ~/code/dotfiles/.config/herdr/config.toml ~/.config/herdr/config.toml
+```
+
 ### Keyboard Tweaks
 
 TODO: macOS 13.x doesn't need these settings anymore i think

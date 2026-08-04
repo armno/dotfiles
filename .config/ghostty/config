@@ -60,4 +60,7 @@ macos-titlebar-style = tabs
 copy-on-select = clipboard
 keybind = ctrl+f=write_scrollback_file:open
 macos-option-as-alt = true
-theme = Monokai Pro Octagon
+
+# theme = Tomorrow Night Bright
+# Ayu for lower contrast
+# theme = Ayu

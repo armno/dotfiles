@@ -35,10 +35,14 @@ setopt    incappendhistory  #Immediately append to the history file, not just wh
 autoload -Uz compinit
 compinit
 
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu no          # fzf-tab provides its own menu
 zstyle ':completion:*' insert-unambiguous true
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+
+# fzf-tab: replace the completion menu with an fzf fuzzy finder.
+# Must load after compinit but before autosuggestions/syntax-highlighting (they wrap the Tab widget).
+source /opt/homebrew/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
