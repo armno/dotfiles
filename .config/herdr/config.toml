@@ -26,7 +26,7 @@ onboarding = false
 # red = "#ff6188"
 # green = "#a6e3a1"
 
-name = "catppuccin"
+name = "dracula"
 auto_switch = false
 [terminal]
 # Executable used for new interactive panes.
@@ -81,14 +81,14 @@ prefix = "ctrl+s"
 # close_workspace = "prefix+shift+d"
 # previous_workspace = "" # optional, unset by default
 # next_workspace = ""     # optional, unset by default
-# previous_agent = ""     # optional, unset by default
-# next_agent = ""         # optional, unset by default
+previous_agent = ["shift+up", "ctrl+shift+k"]
+next_agent = ["shift+down", "ctrl+shift+j"]
 # focus_agent = ""        # optional indexed binding, e.g. "prefix+alt+1..9"
 # remote_image_paste = "ctrl+v" # only active in herdr --remote; empty disables raw-key image paste
 # new_tab = "prefix+c"
 # rename_tab = "prefix+shift+t"
-previous_tab = ["prefix+p", "shift+left"]
-next_tab = ["prefix+n", "shift+right"]
+previous_tab = ["prefix+p", "shift+left", "ctrl+shift+h"]
+next_tab = ["prefix+n", "shift+right", "ctrl+shift+l"]
 # switch_tab = "prefix+1..9"
 # switch_workspace = ""   # optional indexed binding, e.g. "prefix+shift+1..9"
 # close_tab = "prefix+shift+x"
@@ -255,6 +255,11 @@ herdr agent list | jq -r '
 # accent = "cyan"
 
 # Background notification popup delivery
+show_agent_labels_on_pane_borders = true
+
+[ui.sidebar.agents]
+rows = [["state_icon", "workspace"], ["state_text", "agent"]]
+
 [ui.toast]
 # off = disable pop-up notifications
 # herdr = show in-app toasts
@@ -263,6 +268,7 @@ herdr agent list | jq -r '
 # delivery = "off"
 # delay_seconds = 1
 
+delivery = "off"
 [ui.toast.herdr]
 # position = "bottom-right"
 
