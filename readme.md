@@ -181,3 +181,28 @@ mkdir -p ~/.config/bat
 ln -s .config/bat/config ~/.config/bat/config
 ```
 
+### Omarchy
+
+These files customize Omarchy without modifying its package-managed files in
+`/usr/share/omarchy/`.
+
+```sh
+DOTFILES="$HOME/code/dotfiles"
+mkdir -p ~/.config/hypr ~/.config/omarchy
+
+for file in autostart.lua bindings.lua hyprland.conf hyprland.lua \
+  hyprsunset.conf input.lua looknfeel.lua monitors.lua xdph.conf; do
+  ln -sfn "$DOTFILES/.config/hypr/$file" "$HOME/.config/hypr/$file"
+done
+
+ln -sfn "$DOTFILES/.config/omarchy/shell.json" \
+  "$HOME/.config/omarchy/shell.json"
+```
+
+`monitors.lua` contains local display scaling and may need to be adjusted on a
+different machine. After changing Hyprland files, validate the configuration:
+
+```sh
+hyprctl reload
+hyprctl configerrors
+```
