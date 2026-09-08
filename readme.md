@@ -9,9 +9,9 @@ cd ~/code
 git clone git@github.com:armno/dotfiles.git
 ```
 
-### Homebrew
+### macOS
 
-[Install Homebrew](https://brew.sh/), then install all packages needed for the set up mentioned in this readme.
+[Install Homebrew](https://brew.sh/), then install the macOS dependencies:
 
 ```sh
 brew install eza zoxide coreutils editorconfig git-delta bat fzf starship fnm
@@ -27,20 +27,40 @@ mkdir -p ~/.config/ghostty
 ln -s ~/code/dotfiles/.config/ghostty/config ~/.config/ghostty/config
 ```
 
-### zsh
+### macOS Zsh
 
-Symlink `.zshrc` config
-
-```sh
-ln -s ~/code/dotfiles/.zshrc ~/.zshrc
-```
-
-zsh plugins
+Install the Zsh plugins with Homebrew:
 
 ```sh
-brew install zsh-autosuggestion zsh-syntax-highlighting
+brew install zsh-autosuggestions zsh-syntax-highlighting
 ```
-check `brew info zsh-autosuggestions` and `brew info zsh-autosuggestions` and update paths in `.zshrc` if needed.
+
+Symlink the Zsh configuration:
+
+```sh
+ln -sfn ~/code/dotfiles/.zshrc ~/.zshrc
+```
+
+### Omarchy Zsh
+
+On Omarchy/Arch, install Zsh and its plugins:
+
+```sh
+omarchy pkg add zsh zsh-autosuggestions zsh-syntax-highlighting
+omarchy pkg aur add fzf-tab
+```
+
+Symlink the Zsh configuration:
+
+```sh
+ln -sfn ~/code/dotfiles/.zshrc ~/.zshrc
+```
+
+Make Zsh the default login shell:
+
+```sh
+chsh -s "$(command -v zsh)"
+```
 
 ### Aliases and Functions
 

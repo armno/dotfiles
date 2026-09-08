@@ -8,7 +8,9 @@ eval "$(zoxide init zsh)"
 source ~/.aliases
 source ~/.functions
 
-eval "$(fnm env --use-on-cd)"
+if command -v fnm >/dev/null 2>&1; then
+  eval "$(fnm env --use-on-cd)"
+fi
 
 # oh-my-posh
 # eval "$(oh-my-posh init zsh --config ~/code/dotfiles/armno.omp.json)"
@@ -42,18 +44,30 @@ zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower
 
 # fzf-tab: replace the completion menu with an fzf fuzzy finder.
 # Must load after compinit but before autosuggestions/syntax-highlighting (they wrap the Tab widget).
-source /opt/homebrew/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh
+if [ -r /usr/share/zsh/plugins/fzf-tab/fzf-tab.zsh ]; then
+  source /usr/share/zsh/plugins/fzf-tab/fzf-tab.zsh
+elif [ -r /opt/homebrew/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh ]; then
+  source /opt/homebrew/opt/fzf-tab/share/fzf-tab/fzf-tab.zsh
+fi
 
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if [ -r /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [ -r /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
+  source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+if [ -r /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [ -r /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
+  source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$HOME/.local/bin:$PATH"
 
 # opencode
-export PATH=/Users/armno/.opencode/bin:$PATH
+export PATH="$HOME/.opencode/bin:$PATH"
 
 # bun completions
-[ -s "/Users/armno/.bun/_bun" ] && source "/Users/armno/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

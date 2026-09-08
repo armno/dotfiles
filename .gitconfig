@@ -48,7 +48,7 @@
 	autocrlf = false
 	filemode = false
 	untrackedCache = true
-	pager = delta
+	# pager = delta
 [advice]
 	statusHints = false
 	ignoredHook = false
