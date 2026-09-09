@@ -14,7 +14,7 @@ git clone git@github.com:armno/dotfiles.git
 [Install Homebrew](https://brew.sh/), then install the macOS dependencies:
 
 ```sh
-brew install eza zoxide coreutils editorconfig git-delta bat fzf starship fnm
+brew install eza zoxide coreutils git-delta bat fzf starship fnm
 ```
 
 ### Ghostty
@@ -88,8 +88,7 @@ base16_material-darker
 
 ### Vim
 
-My Vim setup requires [ag](https://github.com/ggreer/the_silver_searcher)
-and [editorconfig](http://editorconfig.org), which are already installed by the brew command above.
+My Vim setup uses [ag](https://github.com/ggreer/the_silver_searcher) for searching.
 
 Install Plug from [https://github.com/junegunn/vim-plug#unix](https://github.com/junegunn/vim-plug#unix),
 then install plugins with
